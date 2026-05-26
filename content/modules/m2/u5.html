@@ -1,0 +1,73 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>You click a link, realize the page looks wrong, and feel a strong urge to quietly fix it yourself before anyone notices. That delay is often where the damage grows.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>The earlier you act, the smaller the damage. Reporting fast is more valuable than reporting perfectly.</p>
+  <p>Most workers think reporting should happen after they are sure something bad happened. In practice, the opposite is safer. Security teams would rather investigate a false alarm quickly than learn about a real incident after the attacker has had an hour of free movement.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Response depends on how far you got</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div><strong>Suspicious but untouched:</strong> do not interact further; report through the normal channel.</div></li>
+    <li><span class="lesson-step-number">2</span><div><strong>Clicked but did not submit:</strong> report, scan if required, and stay alert for follow-up contact.</div></li>
+    <li><span class="lesson-step-number">3</span><div><strong>Submitted credentials:</strong> change reused passwords immediately, starting with email, and tell IT.</div></li>
+    <li><span class="lesson-step-number">4</span><div><strong>Sent money or data:</strong> escalate to management, IT, and finance immediately because time affects recovery.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Do not tidy the scene</h2>
+  <p>Deleting the email, clearing history, or quietly "checking a few things first" often destroys useful evidence and burns response time. Report first. Let the team decide what they need preserved.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Your rule under embarrassment</h2>
+  <p>If you feel embarrassed, report faster. Shame is not a signal that the incident is small. It is often the reason people wait. Good reporting culture depends on workers choosing honesty over self-protection in the moment.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the best immediate response for each phishing stage.",
+  "prompt_header": "Stage",
+  "columns": ["Report and delete", "Report and monitor", "Change password and report", "Escalate to finance / IT immediately"],
+  "rows": [
+    {"prompt": "Suspicious email in inbox; no click, no reply, no attachment opened", "correct_column": "Report and delete", "explanation": "If nothing was acted on, report through the normal path and remove it."},
+    {"prompt": "Clicked the link, but did not submit credentials", "correct_column": "Report and monitor", "explanation": "This stage needs reporting plus follow-up watchfulness or scans."},
+    {"prompt": "Entered your password on the phishing page", "correct_column": "Change password and report", "explanation": "Credential submission requires immediate password change and escalation."},
+    {"prompt": "Approved a fake payment request and money may have moved", "correct_column": "Escalate to finance / IT immediately", "explanation": "Payment fraud response must start with urgent escalation."}
+  ],
+  "feedback_correct": "Correct: the right action depends on how far the incident progressed."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Sanity-check your responses.",
+  "questions": [
+    {
+      "prompt": "First action after entering credentials on a phishing page?",
+      "options": [
+        {"text": "Wait until you can investigate from home", "correct": false, "feedback": "Speed beats certainty. Act now."},
+        {"text": "Change the password on every account that used it, starting with email", "correct": true, "feedback": "Right: and then report immediately."},
+        {"text": "Delete the email so no one finds out", "correct": false, "feedback": "Hiding it makes it worse. Report and preserve the evidence."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Report fast, even when you are not sure. The cost of a false alarm is low; the cost of a hidden incident grows with every minute.</p>
+</section>

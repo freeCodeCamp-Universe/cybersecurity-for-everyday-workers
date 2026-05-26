@@ -1,0 +1,90 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A borrowed laptop feels safe because the person lending it is trustworthy. But the security question is about the device, not the person. You cannot see malware, saved sessions, or logging tools just by knowing the owner.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>A device you do not control may have keyloggers, modified browsers, or saved sessions from prior users. Treat it as untrusted by default.</p>
+  <p>This includes public kiosks, shared workstations, hot-desk tablets, borrowed family laptops, and public charging equipment. Different environments have different risks, but the common thread is loss of control.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Where the risk comes from</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Public computers</h3>
+      <p>You do not know what software is installed or who used it previously.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Shared work devices</h3>
+      <p>The danger is often session persistence rather than malware alone.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Borrowed devices</h3>
+      <p>The trust profile belongs to the device owner, not to your work's requirements.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Public USB charging</h3>
+      <p>Some ports can carry data as well as power, so convenience can create unnecessary risk.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>The safe default</h2>
+  <ul class="lesson-checklist">
+    <li>Avoid logging into work accounts on devices you do not control.</li>
+    <li>If you must use a shared work device, sign out explicitly from every account.</li>
+    <li>Prefer wall outlets, your own cable, or a data blocker instead of public USB ports.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the safer alternative.",
+  "questions": [
+    {
+      "prompt": "You need to print a boarding pass at the hotel business center.",
+      "options": [
+        {"text": "Log into your work email to fetch the PDF and print", "correct": false, "feedback": "Public computers may log every keystroke. Don't log into work accounts on them."},
+        {"text": "Email the PDF to yourself, open it from a browser the airline already lets you sign into without a password, or use mobile boarding pass", "correct": true, "feedback": "Right: keep credentials off untrusted devices."},
+        {"text": "Skip the boarding pass: they'll print one at the gate", "correct": false, "feedback": "True but doesn't address the principle. Avoid logging into anything sensitive on public computers."}
+      ]
+    },
+    {
+      "prompt": "A colleague offers their laptop because yours is at home.",
+      "options": [
+        {"text": "Log in normally: you trust the colleague", "correct": false, "feedback": "Trust applies to the person, not to the software and history on their device. You cannot see what is installed on it."},
+        {"text": "Use a private/incognito window and only log out fully when done: or wait until you have your own device", "correct": true, "feedback": "Right: private mode reduces session leakage; better still, don't log into work credentials at all."},
+        {"text": "Save passwords in their browser for convenience", "correct": false, "feedback": "That's the opposite of the right move."}
+      ]
+    },
+    {
+      "prompt": "Your phone is at 4% in an airport. There's a public USB port at the gate.",
+      "options": [
+        {"text": "Plug straight in: it's just a phone", "correct": false, "feedback": "Public USB ports can carry data. Use a wall outlet, your own battery, or a data-blocker."},
+        {"text": "Use a wall outlet with your own cable, or a USB data-blocker", "correct": true, "feedback": "Right: power without data is the safe combination."}
+      ]
+    },
+    {
+      "prompt": "You're on a hot-desk shared work tablet for the start of your shift.",
+      "options": [
+        {"text": "Log in, use the tablet, close the browser at the end of the shift", "correct": false, "feedback": "Closing the browser doesn't end sessions. Use full sign-out."},
+        {"text": "Log in, use it, then explicitly sign out of every account before leaving", "correct": true, "feedback": "Right: saved sessions persist; explicit sign-out is the only reliable end."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>A device you do not control sees everything you do on it. Assume that by default, and avoid giving such devices access to your work life.</p>
+</section>

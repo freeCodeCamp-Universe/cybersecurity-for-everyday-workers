@@ -1,0 +1,50 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>When everything is treated as equally sensitive, work slows down and people bypass the rules. When nothing is treated as special, real harm gets exposed. Classification exists to avoid both failures.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Different types of data carry different consequences if they leak. Classification matches the level of protection to the level of consequence.</p>
+  <p>The point is not secrecy for its own sake. The point is making sure the handling effort matches the damage a leak would cause to people, customers, the organization, or legal obligations.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What classification helps you decide</h2>
+  <ul class="lesson-checklist">
+    <li>Where the data can be stored.</li>
+    <li>Who can access it and how it can be shared.</li>
+    <li>How long it should be kept.</li>
+    <li>What level of review or logging is appropriate.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Important idea</span>
+  <h2>Classification is about consequence, not drama</h2>
+  <p>A published blog post may be harmless if public, but highly restricted if it includes salary data in hidden comments. A name alone may be low sensitivity, but a name plus diagnosis or account details can move the same artifact to a much higher level.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "sort",
+  "instructions": "For each scenario, was the data over-protected or under-protected?",
+  "categories": ["Over-protected", "Under-protected"],
+  "items": [
+    {"text": "A team's published blog post draft is locked behind 'restricted' classification, blocking marketing review for a week.", "category": "Over-protected", "explanation": "Blog drafts are typically internal at most."},
+    {"text": "Customer Social Security numbers are shared in an internal Slack channel of 200 people.", "category": "Under-protected", "explanation": "PII like SSNs needs restricted handling, not broad chat."},
+    {"text": "The company's published mission statement requires VP approval to view.", "category": "Over-protected", "explanation": "Public information shouldn't have approval gates."},
+    {"text": "A spreadsheet of staff salaries is emailed as an attachment to all managers without protection.", "category": "Under-protected", "explanation": "Confidential personnel data deserves controlled access, not email broadcast."},
+    {"text": "The cafeteria menu is encrypted at rest with restricted-tier controls.", "category": "Over-protected", "explanation": "Public information doesn't need restricted-tier handling."}
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Classification matches protection to consequence. Without it, organizations become either too slow or too exposed.</p>
+</section>

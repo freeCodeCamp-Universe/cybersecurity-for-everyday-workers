@@ -1,0 +1,66 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Some information is not merely "sensitive by company policy." It is sensitive because law, contract, or industry rules attach obligations to it. Missing that distinction changes the consequences for everyone involved.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Some data categories are protected by law or formal industry frameworks, not just by workplace preference. Recognizing them is part of recognizing legal and contractual duty.</p>
+  <p>You do not need to become a privacy lawyer to work safely. You do need to notice when a file contains regulated content so that the stricter handling path starts immediately.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The main categories to recognize</h2>
+  <ul class="lesson-checklist">
+    <li>PII: information identifying a person directly or in combination.</li>
+    <li>PHI: identifiable health information with especially strict handling expectations.</li>
+    <li>PCI: payment card data governed by industry control requirements.</li>
+    <li>IP: trade secrets, code, internal research, and other proprietary assets. Unlike PII and PHI, IP protection is governed by contract and intellectual property law, not personal-data privacy regulations.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Important rule</span>
+  <h2>Overlaps stack; the strictest rule wins</h2>
+  <p>A single file can contain multiple regulated categories at once. When that happens, do not pick one and ignore the others. Treat the artifact according to the strictest applicable handling rule.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "sort",
+  "instructions": "Identify the dominant regulated category.",
+  "categories": ["PII", "PHI", "PCI", "IP"],
+  "items": [
+    {"text": "List of donor names with email and date of birth", "category": "PII"},
+    {"text": "Spreadsheet of patient diagnoses tied to names", "category": "PHI"},
+    {"text": "CSV of customer credit card numbers and expiry dates", "category": "PCI"},
+    {"text": "Source code for an unreleased product feature", "category": "IP"},
+    {"text": "Hospital billing file with patient name, diagnosis, and card-on-file token", "category": "PHI", "explanation": "Multiple categories overlap here; PHI is the strictest applicable. Treat the file as restricted with all overlapping rules."}
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Apply the strictest-rule-wins principle.",
+  "questions": [
+    {
+      "prompt": "A file contains names + diagnoses + card numbers. Which framework's rules apply?",
+      "options": [
+        {"text": "Only HIPAA", "correct": false, "feedback": "PCI rules also apply to the card data; the strictest rule applies per element."},
+        {"text": "Only PCI-DSS", "correct": false, "feedback": "PHI is also there; can't ignore HIPAA."},
+        {"text": "All applicable: HIPAA + PCI-DSS, follow the strictest", "correct": true, "feedback": "Right: overlaps stack; the strictest rule wins overall."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Some data categories carry legal or contractual obligations on top of internal policy. Recognize them early and handle them at the strictest relevant level.</p>
+</section>

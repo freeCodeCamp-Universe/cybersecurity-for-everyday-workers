@@ -1,0 +1,79 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Leah wants to improve all of her account security at once, but she has 30 work-related logins and limited time. If she treats every account equally, she gets overwhelmed and changes nothing. If she prioritizes by impact, she can secure the accounts that matter most this week.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>The goal is not to apply the maximum control everywhere on day one. The goal is to apply the right protection level to the accounts that create the most risk.</p>
+  <p>That means building a practical stack: unique passwords stored in a manager, MFA wherever possible, and passkeys where supported. The order matters because some accounts control the rest.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>How to prioritize your accounts</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div><strong>Email first.</strong> Email usually controls password reset flows for many other services.</div></li>
+    <li><span class="lesson-step-number">2</span><div><strong>Money and people data next.</strong> Payroll, banking, HR, expense, and customer systems carry obvious business impact.</div></li>
+    <li><span class="lesson-step-number">3</span><div><strong>Shared or admin accounts after that.</strong> These are often overlooked and can affect multiple people at once.</div></li>
+    <li><span class="lesson-step-number">4</span><div><strong>Document constraints.</strong> If a system only offers SMS or blocks password managers, note it and raise it through the right IT path.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">What good looks like</span>
+  <h2>A practical authentication stack</h2>
+  <ul class="lesson-checklist">
+    <li>Unique password for every account, stored in a password manager.</li>
+    <li>MFA enabled on every account that supports it.</li>
+    <li>Passkey enabled where available and manageable.</li>
+    <li>Healthy suspicion toward unexpected login prompts, even when the page looks familiar.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Important limit</span>
+  <h2>Personal action does not replace organizational support</h2>
+  <p>You control only part of the system. Sometimes the right next step is not a workaround; it is documenting the gap and asking IT or a manager to change the supported method. Good personal habits matter, but they do not replace policy, tooling, or incident response.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Your one-week plan</h2>
+  <p>Use this lesson to decide what happens first, not someday. Pick the five work accounts you touch most or that would hurt most if compromised. Audit them. Then choose only three concrete upgrades for the next week so the plan is small enough to finish.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "For each account, choose the most important next hardening step.",
+  "prompt_header": "Account",
+  "columns": ["Enable MFA", "Move into password manager", "Turn on passkey", "Already in good shape"],
+  "rows": [
+    {"prompt": "Work email: unique password, in vault, no MFA yet, no passkey", "correct_column": "Enable MFA", "explanation": "Email gets MFA before lower-impact improvements."},
+    {"prompt": "Expense portal: memorable password reused from another account, no vault", "correct_column": "Move into password manager", "explanation": "Reuse is the primary failure to fix first."},
+    {"prompt": "Git hosting: unique vaulted password, MFA enabled, passkey available", "correct_column": "Turn on passkey", "explanation": "Passkey is the next step once the basics are already in place."},
+    {"prompt": "Shared team wiki: unique vaulted password, MFA enabled, no passkey support", "correct_column": "Already in good shape", "explanation": "If no passkey exists and the basics are done, this account is already hardened well."}
+  ],
+  "feedback_correct": "Correct: each account should be improved according to the biggest remaining gap."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "order",
+  "instructions": "Put these hardening actions in the best priority order for a typical worker.",
+  "items": [
+    "Enable MFA on work email",
+    "Move reused passwords into a password manager",
+    "Turn on passkeys where already supported"
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Start with the accounts that can unlock or damage the most, especially email. You do not need a perfect rollout. You need a prioritized one that actually gets done.</p>
+</section>

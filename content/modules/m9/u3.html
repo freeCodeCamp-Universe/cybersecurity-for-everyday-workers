@@ -1,0 +1,50 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>BEC often contains no malicious link, no obvious malware, and sometimes no typo. It succeeds by manipulating process, not by attacking software.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Business Email Compromise impersonates a trusted person or partner to redirect money, payroll, or account changes. It is a social attack on approval workflows.</p>
+  <p>Because it often comes through real or realistic channels, the strongest defense is not "spot the bad attachment." It is a rule that sensitive changes require separate verification.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What BEC usually looks like</h2>
+  <ul class="lesson-checklist">
+    <li>Urgency and pressure to move faster than normal procedure.</li>
+    <li>Requests for secrecy or bypassing colleagues.</li>
+    <li>Changes to known payment or payroll details.</li>
+    <li>Lookalike domains or unexpected reply paths when the attacker is less sophisticated.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>The verification step that matters</h2>
+  <p>Any payment, banking-detail, or payroll-change request gets a second-channel check using a saved number or established contact path. The original email is never the verification channel.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the best verification step for each BEC-style message.",
+  "prompt_header": "Message",
+  "columns": ["Call executive at saved number", "Call vendor using number on file", "Verify through HR or known internal channel"],
+  "rows": [
+    {"prompt": "CEO asks for an urgent confidential wire from a lookalike domain", "correct_column": "Call executive at saved number", "explanation": "Out-of-band confirmation with the executive is required."},
+    {"prompt": "Known vendor sends unchanged invoice total but new bank details", "correct_column": "Call vendor using number on file", "explanation": "Banking changes require vendor verification outside the message."},
+    {"prompt": "A payroll direct-deposit change comes from a colleague's personal Gmail", "correct_column": "Verify through HR or known internal channel", "explanation": "Payroll changes should go through internal trusted channels, not the email alone."}
+  ],
+  "feedback_correct": "Correct: the defense against BEC is always a second trusted channel, not a reply in the same thread."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>BEC is a procedural attack. The defense is a procedural rule: verify payment and access changes through a separate trusted channel.</p>
+</section>

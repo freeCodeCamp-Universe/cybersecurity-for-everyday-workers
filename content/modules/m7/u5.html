@@ -1,0 +1,51 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Classification only matters if it changes behavior. Once a file has a level, you should be able to predict where it belongs, how it can be shared, and when it should be removed.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Each classification level has a handling envelope: where the data can be stored, how it can be shared, and how long it can be kept.</p>
+  <p>This is where classification becomes practical. If the level is known but the next step is still unclear, the scheme is not helping enough yet.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The handling dimensions</h2>
+  <ul class="lesson-checklist">
+    <li>Storage: which systems are approved for that level.</li>
+    <li>Sharing: who can receive it and whether named access or approval is required.</li>
+    <li>Retention: how long the information should remain available.</li>
+    <li>Disposal: how to remove it without leaving stray copies in obvious places.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Boundary risk</span>
+  <h2>Many leaks happen during movement</h2>
+  <p>Copying sensitive data into a weaker system, exporting it for convenience, or pasting it into a broader chat channel quietly downgrades protection. Boundaries between systems are where handling rules matter most.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the handling rule that best fits each classification level.",
+  "prompt_header": "Handling scenario",
+  "columns": ["Public", "Internal", "Confidential", "Restricted"],
+  "rows": [
+    {"prompt": "May be shared freely outside the company with no access logging requirement", "correct_column": "Public", "explanation": "That is public-information handling."},
+    {"prompt": "Stored in approved company systems and shared with employees as needed", "correct_column": "Internal", "explanation": "That is the normal internal baseline."},
+    {"prompt": "Shared only with named individuals in access-controlled systems", "correct_column": "Confidential", "explanation": "Named-access control is typical for confidential material."},
+    {"prompt": "Requires tight access control, logging, and strongest storage rules", "correct_column": "Restricted", "explanation": "Those are restricted-data controls."}
+  ],
+  "feedback_correct": "Correct: once the level is known, the handling envelope should follow predictably."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Once data is classified, the handling rules should follow. Apply them consistently, especially when moving data across tools and audiences.</p>
+</section>

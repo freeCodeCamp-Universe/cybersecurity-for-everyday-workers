@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="src/assets/favicon-32x32.png" />
+    <title>Cybersecurity for Everyday Workers</title>
+    <link rel="stylesheet" href="src/styles/tokens.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/components.css" />
+  </head>
+  <body class="dark-palette">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <a href="./" class="brand">
+        <span class="prompt">$</span>cybersecurity-for-workers
+      </a>
+      <button type="button" class="header-link" id="reset-progress">
+        reset progress
+      </button>
+    </header>
+
+    <main class="page" id="main-content">
+      <section class="page-intro">
+        <h1>Cybersecurity for Everyday Workers</h1>
+        <p class="subtitle">
+          Ten modules. Sixty short lessons. Open one, finish it, mark it done.
+        </p>
+      </section>
+      <div class="course-progress" id="course-progress"></div>
+      <div class="continue-bar" id="continue-bar"></div>
+<ol class="module-list" id="module-list" aria-label="Course modules"></ol>
+    </main>
+
+    <script type="module" src="src/features/home/index.js"></script>
+  </body>
+</html>

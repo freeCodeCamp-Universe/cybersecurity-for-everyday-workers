@@ -1,0 +1,72 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A useful-looking browser extension asks for permission to read every page you visit. A free mobile app wants access to your contacts and microphone for no clear reason. The risk is not just the download. It is the ongoing access you grant afterward.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Every installed app and granted permission is a possible path in. The fewer and more trusted, the smaller the attack surface.</p>
+  <p>Software hygiene is not only about avoiding obviously malicious tools. It is also about pruning the unnecessary, because software you forgot about can still have permissions, stored sessions, and update problems.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Three questions before you install</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div><strong>Is the source real?</strong> Prefer official stores, vendor sites, or your employer's catalog.</div></li>
+    <li><span class="lesson-step-number">2</span><div><strong>Are the permissions justified?</strong> Ask whether the app truly needs the access it requests.</div></li>
+    <li><span class="lesson-step-number">3</span><div><strong>Will I still maintain this later?</strong> Unused software becomes unmaintained clutter and risk.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Workplace example</span>
+  <h2>Extensions count as software</h2>
+  <p>Browser extensions can read pages, access forms, and observe browsing behavior. That makes them powerful and useful, but also risky when installed casually. A "small helper" extension can see much more of your work than many full applications can.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Adopt a pruning habit</h2>
+  <ul class="lesson-checklist">
+    <li>Install less by default.</li>
+    <li>Remove apps and extensions you no longer actively use.</li>
+    <li>Review permissions for the tools you keep and revoke anything that does not match the purpose.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the best action for each app or extension.",
+  "prompt_header": "Tool",
+  "columns": ["Keep", "Remove", "Review permissions first"],
+  "rows": [
+    {"prompt": "A browser extension you forgot installing and have not used in a year", "correct_column": "Remove", "explanation": "Unused extensions should be removed rather than left in place."},
+    {"prompt": "A video-call app that asks for microphone and camera access", "correct_column": "Keep", "explanation": "Those permissions match the app's obvious purpose."},
+    {"prompt": "A flashlight app requesting contacts and location", "correct_column": "Review permissions first", "explanation": "The permission request is suspicious relative to the function."},
+    {"prompt": "An old PDF converter replaced by a newer approved company tool", "correct_column": "Remove", "explanation": "Superseded software should be uninstalled."}
+  ],
+  "feedback_correct": "Correct: remove unused tools, keep justified ones, and review mismatched permissions closely."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Confirm the cleanup.",
+  "items": [
+    "Removed extensions you don't use",
+    "Removed apps you no longer use",
+    "Reviewed what permissions remaining apps still hold (camera, mic, contacts, location)",
+    "Revoked any permission that doesn't match the app's purpose"
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Install less. Grant fewer permissions. Remove what you no longer use. Small reductions in attack surface add up.</p>
+</section>

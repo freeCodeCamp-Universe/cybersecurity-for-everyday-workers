@@ -1,0 +1,64 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Many file problems do not start with an intentional overshare. They start because edit access was easier to grant than view access, a sensitive file inherited the wrong folder permissions, or an old contractor was never removed.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Every shared file should answer three questions: who can open it, what can they do with it, and can they pass that access to someone else.</p>
+  <p>Safe permissions are not only about the first share. They are also about what happens afterward: inheritance, re-sharing, long-lived access, and permission drift over time.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What to review on any shared folder</h2>
+  <ul class="lesson-checklist">
+    <li>Use the lowest access level that still supports the work: view before comment, comment before edit.</li>
+    <li>Check whether editors can share the file onward without asking you.</li>
+    <li>Check whether folder inheritance is wider than the file really needs.</li>
+    <li>Give temporary collaborators an end date, not open-ended access.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Permission cleanup as a habit</h2>
+  <p>Reviewing a small number of high-value folders every few months catches most access drift. You do not need to audit every file. You need to revisit the places where sensitive or shared work accumulates.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the best permission action for each access situation.",
+  "prompt_header": "Access situation",
+  "columns": ["Keep as is", "Downgrade access", "Remove access", "Set an expiration"],
+  "rows": [
+    {"prompt": "A former contractor still has view access to the folder", "correct_column": "Remove access", "explanation": "Past contractors should not retain ongoing access."},
+    {"prompt": "A reviewer only needs to comment, but currently has edit access", "correct_column": "Downgrade access", "explanation": "Use the lowest level that still supports the work."},
+    {"prompt": "A current team group needs edit access during an active project", "correct_column": "Keep as is", "explanation": "If the level matches the active need, keep it."},
+    {"prompt": "An external collaborator needs access for a two-week engagement", "correct_column": "Set an expiration", "explanation": "Short-term access should end automatically when possible."}
+  ],
+  "feedback_correct": "Correct: permission reviews are about least access, short duration, and removing leftovers."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Cleanup steps.",
+  "items": [
+    "Removed any access that's no longer needed",
+    "Downgraded edit-when-only-view-is-needed",
+    "Disabled re-sharing for sensitive items",
+    "Set an expiration on contractor or external access where supported",
+    "Set a calendar reminder to review again in 3 or 6 months"
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Grant the minimum access for the minimum time, and review what you already granted before it becomes invisible background risk.</p>
+</section>

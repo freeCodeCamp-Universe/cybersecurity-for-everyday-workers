@@ -1,0 +1,68 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Attack patterns feel less chaotic once you see the stages repeating. Different attacks use different tools, but they often follow the same shape from scouting to impact.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Most attacks share a common shape: reconnaissance, initial access, expansion, and impact. Knowing that shape explains why layered defenses work better than any single control.</p>
+  <p>This is useful because it ties earlier modules together. Password hygiene, phishing recognition, device hardening, access control, and reporting each interrupt different parts of the same larger process.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The four stages</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Reconnaissance</h3>
+      <p>Attackers gather names, roles, vendors, and workflows before they try to enter.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Initial access</h3>
+      <p>They get the first foothold through phishing, stolen credentials, or exposed services.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Expansion</h3>
+      <p>They move sideways to more accounts, more systems, and more privileges.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Impact</h3>
+      <p>The actual harm arrives: theft, fraud, sabotage, encryption, or disruption.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "match",
+  "instructions": "Match each practice to the attack stage it most directly disrupts.",
+  "left": [
+    "Unique password per account",
+    "MFA on email",
+    "Screen lock with 5-minute timer",
+    "Reporting a phishing email",
+    "Removing access you no longer use"
+  ],
+  "right": [
+    "Reconnaissance",
+    "Initial access",
+    "Expansion (post-exploitation)",
+    "Impact"
+  ],
+  "answers": {
+    "Unique password per account": "Initial access",
+    "MFA on email": "Initial access",
+    "Screen lock with 5-minute timer": "Expansion (post-exploitation)",
+    "Reporting a phishing email": "Initial access",
+    "Removing access you no longer use": "Expansion (post-exploitation)"
+  }
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Attacks have stages. Defenses work by raising cost at each stage, not by magically preventing every attack at the front door.</p>
+</section>

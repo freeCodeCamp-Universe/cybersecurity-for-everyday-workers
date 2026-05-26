@@ -1,0 +1,64 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Extra access feels helpful in the moment: just give admin, give the whole folder, give every tool "in case." The problem appears later, when a stolen account or former employee can reach much more than the job actually required.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Each person should have the minimum access needed to do their job, and no more. Extra access does not help the job itself; it only increases the damage if something goes wrong.</p>
+  <p>Least privilege is not about distrust. It is about assuming every account can someday make a mistake, be phished, or be misused, and limiting how far that problem can spread.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What least privilege changes</h2>
+  <ul class="lesson-checklist">
+    <li>It reduces the blast radius of a compromised account.</li>
+    <li>It makes access reviews and offboarding easier.</li>
+    <li>It trains people to ask for what they need, not for the maximum possible permission.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>The practical rule</h2>
+  <p>Grant the smallest scope for the shortest time that still allows the work to happen. If more is needed later, that can be added deliberately instead of granted by default on day one.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the best least-privilege grant for each scenario.",
+  "prompt_header": "Scenario",
+  "columns": ["Role-based access with review date", "Project-limited folder access", "Temporary coverage access"],
+  "rows": [
+    {"prompt": "A new hire joins the customer support team next Monday", "correct_column": "Role-based access with review date", "explanation": "New hires should receive the standard role plus a review checkpoint."},
+    {"prompt": "A contractor needs one project folder for two weeks", "correct_column": "Project-limited folder access", "explanation": "Grant only the narrow project scope for the short duration."},
+    {"prompt": "A colleague is covering a parental leave for 12 weeks", "correct_column": "Temporary coverage access", "explanation": "Coverage needs time-bound access aligned to the leave period."}
+  ],
+  "feedback_correct": "Correct: least privilege matches access to the real job, scope, and duration."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Sanity check.",
+  "questions": [
+    {
+      "prompt": "A teammate asks you to give them admin on the project folder 'in case they need it later'. The right move is:",
+      "options": [
+        {"text": "Grant admin: they're trusted", "correct": false, "feedback": "Trust is not the issue. Their account can still be compromised."},
+        {"text": "Grant the lowest level that meets the actual need today, with a review date", "correct": true, "feedback": "Right: least privilege scales protection to the actual job."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Default to less access for less time. Convenience fades quickly; excess permission lingers.</p>
+</section>

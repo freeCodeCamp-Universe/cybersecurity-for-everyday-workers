@@ -1,0 +1,72 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>VPN ads often promise total online safety. In reality, a VPN is a narrow tool: useful in some cases, irrelevant in many others, and unable to fix phishing or device compromise at all.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>A VPN moves your traffic's exit point from the local network to the VPN provider. It is useful in specific situations and oversold in many others.</p>
+  <p>That means the important question is not "Should everyone always use a VPN?" It is "What problem am I trying to solve here?" If the problem is phishing, malware, or the site itself tracking you after login, a VPN is not the answer.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What a VPN does and does not do</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>What it does</h3>
+      <p>Hides your traffic contents and local destinations from the network you are currently on, and makes sites see the VPN server's IP.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>What it does not do</h3>
+      <p>It does not stop phishing, remove malware, hide you from services you log into, or replace HTTPS.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Work vs consumer</span>
+  <h2>Not all VPNs solve the same problem</h2>
+  <p>A work VPN often exists to reach internal company systems and apply company controls. A consumer VPN mostly changes who sees your traffic between you and the internet. Those are different jobs, and one should not be confused for the other.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "VPN: needed, useful, or unnecessary?",
+  "questions": [
+    {
+      "prompt": "Joining an internal company meeting from home, where the meeting tool requires being on the corporate network.",
+      "options": [
+        {"text": "Needed (work VPN)", "correct": true, "feedback": "Right: the work VPN is the entry point to internal resources."},
+        {"text": "Useful", "correct": false, "feedback": "It's not optional here: the tool requires it."},
+        {"text": "Unnecessary", "correct": false, "feedback": "Required for access."}
+      ]
+    },
+    {
+      "prompt": "Browsing news at an airport.",
+      "options": [
+        {"text": "Needed", "correct": false, "feedback": "Routine HTTPS browsing doesn't require a VPN."},
+        {"text": "Useful", "correct": false, "feedback": "Marginal value at best: the news sites are HTTPS."},
+        {"text": "Unnecessary", "correct": true, "feedback": "Right: news browsing on HTTPS doesn't gain meaningful protection from a consumer VPN."}
+      ]
+    },
+    {
+      "prompt": "Opening a work document over hotel Wi-Fi when no work VPN is required by your employer.",
+      "options": [
+        {"text": "Needed", "correct": false, "feedback": "If the employer does not require it, the document platform is already HTTPS."},
+        {"text": "Useful if your role handles especially sensitive content", "correct": true, "feedback": "Right: VPNs add value in narrow cases, not as a blanket rule."},
+        {"text": "Unnecessary always", "correct": false, "feedback": "Context matters. For sensitive roles or hostile networks, useful."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Use a VPN when your employer requires it or when you specifically need to hide network-level traffic details from the local network. Do not mistake it for a general cure-all.</p>
+</section>

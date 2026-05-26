@@ -1,0 +1,87 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>You get an email from a real vendor contact with updated bank details and a short note asking you to handle it quietly before close of business. There is no suspicious link. That is exactly why targeted attacks work.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Targeted attacks use real information about you, your role, or your company, so they bypass many of the signals that catch bulk phishing.</p>
+  <p>Instead of relying on sloppy wording or random mass mail, the attacker studies a workflow that already exists: payments, vendor changes, leadership requests, or account recovery. The defense therefore has to be procedural, not just perceptual.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The targeted-attack patterns to know</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Spear phishing</h3>
+      <p>Tailored to one person using public or stolen context so the message feels plausible.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>BEC</h3>
+      <p>Uses a trusted identity to trigger payment, secrecy, or account changes without obvious malware.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Vendor fraud</h3>
+      <p>Abuses a real vendor relationship, often by compromising the vendor's account or imitating its domain.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Deepfake-assisted fraud</h3>
+      <p>Adds voice or video realism to pressure a fast decision, but still collapses under proper verification.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What good looks like</span>
+  <h2>The out-of-band rule</h2>
+  <p>If a request changes money, credentials, banking details, or privileged access, verify it through a second channel you already trust. That means a saved number, a known chat thread, or an internal process you already use. It never means replying to the suspicious message and asking if it is real.</p>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Trusting realism instead of process</h2>
+  <p>A realistic message is not a verified message. Accurate titles, names, signatures, and even a convincing video call do not remove the need for a second-channel check. Good procedure is what defeats targeted attacks.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "The CFO emails: 'I'm in back-to-back meetings. Please wire $48,000 to the attached account today: closing-day payment to the new vendor. Don't loop in anyone yet, the deal is confidential.' What do you do?",
+  "questions": [
+    {
+      "prompt": "Pick the best response.",
+      "options": [
+        {"text": "Reply asking the CFO to confirm: the email address looks correct", "correct": false, "feedback": "If the account is compromised, the attacker confirms. Use a separate channel."},
+        {"text": "Send the wire: the CFO knows what they're doing", "correct": false, "feedback": "Pressure plus secrecy plus a banking change is the classic BEC shape."},
+        {"text": "Call the CFO at a number you already have saved (not from the email) before doing anything", "correct": true, "feedback": "Right: out-of-band verification defeats BEC even when the email looks real."},
+        {"text": "Forward to a colleague to ask their opinion", "correct": false, "feedback": "Buys time but doesn't verify. Call the CFO directly using a known number."}
+      ]
+    },
+    {
+      "prompt": "A long-time vendor emails an updated invoice with new bank details: no other changes.",
+      "options": [
+        {"text": "Update payment details and pay; the vendor address is correct", "correct": false, "feedback": "Vendor email accounts get compromised. Banking changes deserve verification."},
+        {"text": "Call the vendor at the number on file (not from the email) to confirm", "correct": true, "feedback": "Right: banking changes always warrant out-of-band confirmation."},
+        {"text": "Reply to the email asking for confirmation", "correct": false, "feedback": "If the account is compromised, the attacker replies."}
+      ]
+    },
+    {
+      "prompt": "You get an unexpected video call from someone who looks and sounds like your manager, asking you to approve a transfer.",
+      "options": [
+        {"text": "Trust the video: deepfakes are rare", "correct": false, "feedback": "Deepfake voice and video have been used in documented fraud cases. The verification rule applies regardless of the medium."},
+        {"text": "End the call politely, then reach your manager through your normal channel", "correct": true, "feedback": "Right: the verification rule applies regardless of the medium."},
+        {"text": "Approve the transfer; refusing would be awkward", "correct": false, "feedback": "Awkwardness is cheap. Misdirected funds are not."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>When a request involves money, access, or credentials, realism is not enough. Procedure beats persuasion.</p>
+</section>

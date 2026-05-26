@@ -1,0 +1,51 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>You usually know better than anyone else which systems you actually use. That makes you the cheapest and often the most accurate auditor of your own access.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>You are the most accurate auditor of your own access because you know which permissions still support real work and which ones are simply leftovers.</p>
+  <p>Organizations need formal reviews, but personal access review is a practical habit that catches obvious excess access before it becomes a problem for security or for you.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>A simple self-audit method</h2>
+  <ul class="lesson-checklist">
+    <li>List the systems and resources you can access.</li>
+    <li>Mark when you last used each one.</li>
+    <li>Flag anything unused for a long period as a candidate to remove or downgrade.</li>
+    <li>Record what you changed so the audit leaves a trail.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--myth">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>"I might need it later" is weak justification</h2>
+  <p>It is usually cheaper to ask again when the real need returns than to keep extra access alive for months or years. The convenience benefit is small. The breach impact can be large.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "For each example access, choose the best audit outcome.",
+  "prompt_header": "Access example",
+  "columns": ["Keep", "Downgrade", "Remove", "Review later"],
+  "rows": [
+    {"prompt": "Email account used daily", "correct_column": "Keep", "explanation": "Core daily access should remain."},
+    {"prompt": "General ledger system last used 11 months ago after leaving Finance", "correct_column": "Remove", "explanation": "Unused role-specific access should be removed."},
+    {"prompt": "Customer database edit rights, but you now only read reports", "correct_column": "Downgrade", "explanation": "Reduce access to the lowest level that still fits the job."},
+    {"prompt": "Annual compliance portal used only each December", "correct_column": "Review later", "explanation": "Rare but still legitimate annual access should be flagged, not automatically removed."}
+  ],
+  "feedback_correct": "Correct: the audit outcome depends on current job need and recency of use."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Once a year, or after role changes, look at what you can access and remove what no longer matches your actual work.</p>
+</section>

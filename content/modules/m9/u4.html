@@ -1,0 +1,63 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A stolen credential is rarely the final objective. It is usually the first working key in a chain that leads to other accounts, recovery changes, and deeper access.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Credential theft is typically the entry point, not the end state. Account takeover follows a sequence that becomes much easier when passwords are reused and MFA is missing.</p>
+  <p>This is why email is such a high-value target. Once attackers control the reset path, they can turn one stolen login into several more.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The takeover chain</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div>Obtain a working credential through breach lists, phishing, or malware.</div></li>
+    <li><span class="lesson-step-number">2</span><div>Reuse it on other accounts if the victim reused passwords.</div></li>
+    <li><span class="lesson-step-number">3</span><div>Change recovery settings and lock out the original user.</div></li>
+    <li><span class="lesson-step-number">4</span><div>Reset additional accounts and collect more data or access.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Break the chain at multiple points</h2>
+  <p>Unique passwords stop reuse. MFA blocks password-only login. Alerts help catch recovery changes. Keeping sensitive material out of email limits the damage even after access is gained.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "match",
+  "instructions": "An attacker bought a leaked credential and tried to take over a worker's email. Match each step to the practice that would have stopped it.",
+  "left": [
+    "Step 1: attacker gets a working email + password from a 2022 breach",
+    "Step 2: attacker reuses the pair on the worker's email: login succeeds",
+    "Step 3: attacker changes the recovery phone and email",
+    "Step 4: attacker uses email to reset passwords on banking",
+    "Step 5: attacker downloads attachments and old emails"
+  ],
+  "right": [
+    "Unique password per account (no reuse)",
+    "MFA on email (especially passkey or hardware key)",
+    "Account-activity alerts the worker watches",
+    "MFA on banking + breach-monitoring service (HIBP)",
+    "Sensitive data not stored long-term in email"
+  ],
+  "answers": {
+    "Step 1: attacker gets a working email + password from a 2022 breach": "Unique password per account (no reuse)",
+    "Step 2: attacker reuses the pair on the worker's email: login succeeds": "MFA on email (especially passkey or hardware key)",
+    "Step 3: attacker changes the recovery phone and email": "Account-activity alerts the worker watches",
+    "Step 4: attacker uses email to reset passwords on banking": "MFA on banking + breach-monitoring service (HIBP)",
+    "Step 5: attacker downloads attachments and old emails": "Sensitive data not stored long-term in email"
+  }
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>A stolen credential is the start, not the finish. Good practice breaks the takeover chain at several different steps.</p>
+</section>

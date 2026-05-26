@@ -1,0 +1,75 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A vendor releases a patch on Tuesday for a flaw in a common browser. By Wednesday, attackers know what the patch fixed and start looking for machines that still have the old version. Delay becomes exposure very quickly.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Most successful attacks exploit known flaws that already have patches. Delaying updates leaves open doors that vendors have already closed.</p>
+  <p>Updates feel boring because they are preventive work. But prevention matters precisely because it happens before the failure is visible. An updated device blocks many attacks so early that the user never notices what did not happen.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Why patch timing matters</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div>A vendor finds or is told about a flaw and releases a fix.</div></li>
+    <li><span class="lesson-step-number">2</span><div>Attackers study the fix to understand the weakness.</div></li>
+    <li><span class="lesson-step-number">3</span><div>Unpatched systems become the easiest targets because the path is now known.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--myth">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>"I do not click suspicious things" is not enough</h2>
+  <p>Some vulnerabilities are triggered by websites, files, or apps you would normally trust. Others require almost no action from the user at all. That is why updates matter even for careful people.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Where to focus first</h2>
+  <ul class="lesson-checklist">
+    <li>Operating system updates come first because they affect the whole device.</li>
+    <li>Browser, email client, and password manager updates come next because they handle sensitive workflows directly.</li>
+    <li>Use automatic updates wherever possible so the habit does not depend on memory or motivation.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Run this on your actual primary device.",
+  "items": [
+    "Confirmed automatic OS updates are enabled",
+    "Confirmed automatic browser updates are enabled",
+    "Confirmed automatic password-manager updates are enabled",
+    "Checked the date of the last installed OS update",
+    "Restarted the device if a pending update was waiting",
+    "Repeated the check on a second device (phone or tablet)"
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the best next step when you cannot update a device setting yourself.",
+  "questions": [
+    {
+      "prompt": "Your work laptop's update settings are locked by device management.",
+      "options": [
+        {"text": "Ignore it because IT owns the device", "correct": false, "feedback": "Managed devices still need follow-up if the update state looks wrong."},
+        {"text": "Contact IT or the helpdesk and ask them to confirm the device's update status", "correct": true, "feedback": "Right: escalate the blocked setting to the team that controls it."},
+        {"text": "Turn off the device permanently until the next quarter", "correct": false, "feedback": "That does not resolve the update issue."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Turn on automatic updates and let them run. Most known attacks fail against devices that are current enough not to be the easy option.</p>
+</section>

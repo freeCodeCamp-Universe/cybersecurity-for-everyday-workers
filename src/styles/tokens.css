@@ -1,0 +1,56 @@
+:root {
+  --gray-90: #0a0a23;
+  --gray-85: #1b1b32;
+  --gray-80: #2a2a40;
+  --gray-75: #3b3b4f;
+  --gray-45: #858591;
+  --gray-15: #d0d0d5;
+  --gray-10: #dfdfe2;
+  --gray-05: #f5f6f7;
+  --gray-00: #ffffff;
+
+  --purple: #dbb8ff;
+  --yellow: #f1be32;
+  --blue: #99c9ff;
+  --green: #acd157;
+  --red: #ffadad;
+  --focus: #198eee;
+
+  --bg-primary: var(--gray-90);
+  --bg-secondary: var(--gray-85);
+  --bg-surface: var(--gray-80);
+  --border: var(--gray-75);
+  --fg-primary: var(--gray-00);
+  --fg-secondary: var(--gray-10);
+  --fg-muted: var(--gray-45);
+  --link: var(--blue);
+  --success: var(--green);
+  --danger: var(--red);
+  --cta: var(--yellow);
+
+  --font-mono: "Hack-ZeroSlash", "Fira Mono", Menlo, Consolas, monospace;
+  --font-sans: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius: 4px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+
+  --max-readable: 720px;
+  --max-page: 960px;
+
+  --header-height: 38px;
+  --sidebar-width: 260px;
+  --sidebar-width-collapsed: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

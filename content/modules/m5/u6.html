@@ -1,0 +1,51 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Travel mixes public networks with fatigue, distraction, and unfamiliar environments. Even good rules feel harder to apply when you are rushing through an airport or checking into a hotel late at night.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Travel networks combine public-Wi-Fi risk with an environment where you are tired, time-pressured, and less likely to verify carefully.</p>
+  <p>That is why the best travel-network policy is decided before the trip. A prepared rule beats an improvised decision made in a hurry.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Your travel default</h2>
+  <ul class="lesson-checklist">
+    <li>Use mobile data for the most sensitive tasks when possible.</li>
+    <li>Use Wi-Fi for routine browsing only after confirming you are on the right network and HTTPS is in use.</li>
+    <li>Turn on the work VPN whenever your employer requires it for access or policy.</li>
+    <li>Update devices and confirm MFA before leaving home so you are not doing setup on the road.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Tired and rushed is part of the threat model</h2>
+  <p>The technical environment matters, but so does your state of mind. Attackers do not need a perfect exploit if they can rely on confusion, low battery, and impatience making you skip the normal checks.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the safest default network choice for each travel scenario.",
+  "prompt_header": "Travel scenario",
+  "columns": ["Public Wi-Fi with HTTPS", "Mobile data / tether", "Private room only", "Work VPN required"],
+  "rows": [
+    {"prompt": "Routine email in a hotel after completing the captive portal", "correct_column": "Public Wi-Fi with HTTPS", "explanation": "Routine browsing can use hotel Wi-Fi if the connection is real and HTTPS is in use."},
+    {"prompt": "Bank login or MFA enrollment from an airport", "correct_column": "Mobile data / tether", "explanation": "Sensitive tasks are better on harder-to-impersonate mobile data."},
+    {"prompt": "Joining a confidential project meeting during a conference", "correct_column": "Private room only", "explanation": "The physical environment is the limiting factor, not just the network."},
+    {"prompt": "Accessing an internal company app that only works on the corporate network", "correct_column": "Work VPN required", "explanation": "If the employer requires internal-network access, the work VPN is mandatory."}
+  ],
+  "feedback_correct": "Correct: safe travel-network choices depend on both sensitivity and environment."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Decide your travel rules before you travel. The worst time to invent a network policy is when you are tired, rushed, and already connected to the wrong thing.</p>
+</section>

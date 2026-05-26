@@ -1,0 +1,78 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A spreadsheet may look harmless until you notice hidden tabs, salary data, customer birth dates, or a health note embedded in comments. Sensitive data often appears inside ordinary work files without announcing itself.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Different types of data carry different obligations. Treating all files the same either over-protects routine work or under-protects sensitive content.</p>
+  <p>The key skill is not memorizing every law. It is noticing which category of data you are holding so the handling rule can match the consequence if that file leaks.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What to look for inside a file</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>PII</h3>
+      <p>Information that can identify a person, especially when combined into a record.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Financial data</h3>
+      <p>Account numbers, payment details, payroll, and company financials need tighter handling.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Health data</h3>
+      <p>Health information tied to a person should be treated as restricted even when it appears incidentally.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Confidential business data</h3>
+      <p>Customer lists, product plans, contracts, and unreleased internal material still deserve control.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Sensitive content is often hidden</h2>
+  <p>Metadata, comments, revision history, hidden columns, and failed redactions can expose more than the visible document suggests. Safe handling means checking the whole file, not just the obvious cells or paragraphs.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "sort",
+  "instructions": "Classify each file into the most sensitive category it contains.",
+  "categories": ["PII", "Financial", "Health (PHI)", "Confidential business", "Public"],
+  "items": [
+    {"text": "Customer list with names, email addresses, and dates of birth", "category": "PII", "explanation": "Contains identifiers about specific people."},
+    {"text": "Spreadsheet of bank account numbers for vendor payments", "category": "Financial", "explanation": "Account numbers are financial data."},
+    {"text": "Patient appointment list with diagnoses", "category": "Health (PHI)", "explanation": "Health info tied to identified people."},
+    {"text": "Draft of an unreleased product roadmap", "category": "Confidential business", "explanation": "Internal strategic content."},
+    {"text": "Press release announcing the new office, already on the website", "category": "Public", "explanation": "Already published: no protection needed beyond accuracy."}
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the appropriate handling.",
+  "questions": [
+    {
+      "prompt": "How should the PHI appointment list be shared with a colleague?",
+      "options": [
+        {"text": "Email attachment to their personal account", "correct": false, "feedback": "PHI to a personal email is a likely incident."},
+        {"text": "Named-access shared link in the approved system, no re-sharing", "correct": true, "feedback": "Right: minimum scope in an approved location."},
+        {"text": "Anyone-with-link share for convenience", "correct": false, "feedback": "Forwardable links are not appropriate for restricted data."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Recognize sensitive data when you create, receive, or share a file. The handling rule follows from the category inside it, not from the file extension or how routine the task feels.</p>
+</section>

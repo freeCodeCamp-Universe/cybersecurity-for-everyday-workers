@@ -1,0 +1,67 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A document feels like it lives "on my laptop," but it may also be syncing to the cloud, cached on a phone, and sitting in a shared folder other people can reach. If you do not know where a file lives, you also do not know who can touch it.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>"My computer" and "the cloud" are not separate places when sync is on. A file in a synced folder can exist in multiple locations at once, with different rules about deletion, sharing, and recovery.</p>
+  <p>This matters because safe file handling starts with location. Before deciding how to share or protect a file, you need a clear picture of whether it is local only, cloud-backed, shared, or already copied elsewhere.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The common storage patterns</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Local only</h3>
+      <p>The file is just on the device. If the device fails and no backup exists, the file may be gone.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Cloud with sync</h3>
+      <p>The file exists locally and on a service. Changes and deletions may propagate between them.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Cloud-only</h3>
+      <p>The device mainly shows a placeholder while the real file lives on the platform.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Email attachment</h3>
+      <p>This creates a separate copy you usually cannot revoke once it has been sent.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Your first file-location rule</h2>
+  <ul class="lesson-checklist">
+    <li>Before sharing a file, ask where the live copy really sits.</li>
+    <li>Check whether the folder is syncing to other devices you use.</li>
+    <li>Check whether a shared location already gives access to more people than you expected.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the storage pattern that best describes each file example.",
+  "prompt_header": "File example",
+  "columns": ["Local only", "Cloud with sync", "Cloud-only", "Attachment copy"],
+  "rows": [
+    {"prompt": "A draft in your OneDrive folder that also appears on your laptop and phone", "correct_column": "Cloud with sync", "explanation": "The file exists locally and in cloud sync."},
+    {"prompt": "A contract emailed as a PDF to an external vendor", "correct_column": "Attachment copy", "explanation": "Email creates a copy that leaves your control."},
+    {"prompt": "A web-only document in a platform that shows a placeholder until you open it online", "correct_column": "Cloud-only", "explanation": "The device is not holding the full live file locally."},
+    {"prompt": "A spreadsheet saved only on your desktop with no backup service attached", "correct_column": "Local only", "explanation": "That file exists only on the device."}
+  ],
+  "feedback_correct": "Correct: safe file handling starts with knowing where the live copy actually exists."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Knowing where a file lives tells you who can read it, how changes spread, and what really happens when you move or delete it.</p>
+</section>

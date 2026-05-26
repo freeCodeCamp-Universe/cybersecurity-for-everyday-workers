@@ -1,0 +1,114 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Maria uses the same strong password for her work email, payroll account, and favorite shopping site because it is long and hard to guess. A store she used two years ago is breached. She never hears about it, but attackers add her email and password to a list and start trying it everywhere else.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Passwords fail not because people are careless, but because attackers use automated tools that exploit structural weaknesses at scale.</p>
+  <p>That matters because many people still judge password safety the way they judge a lock on a door: "Could a person guess this?" Attackers usually are not guessing by hand. They use breached lists, software, and scripts that test thousands or millions of possibilities very quickly.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>How the common attacks work</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Credential stuffing</h3>
+      <p>Attackers take known email-and-password pairs from one breach and try them on other services. Reuse is what makes this work.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Dictionary attacks</h3>
+      <p>Attack tools try common words, names, seasons, years, and predictable substitutions like <code>p@ssw0rd</code> or <code>Welcome2025!</code>.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Phishing</h3>
+      <p>The attacker does not crack the password at all. They trick the user into typing it into a fake login page or giving it away directly.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Post-breach reuse</h3>
+      <p>A password can remain dangerous for years after a breach because leaked credentials circulate long after the original incident.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--myth">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>The "I have nothing worth stealing" myth</h2>
+  <p>Attackers do not need you to be rich or famous. A normal email account can reset other accounts. A work account can open the door to payroll, invoices, customer data, or internal systems. Even a low-value account can be used to send spam or phishing to other people.</p>
+  <p>The real question is not "Would someone target me personally?" It is "Would this account help someone make money, get access, or impersonate me?" The answer is often yes.</p>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Workplace example</span>
+  <h2>Why strong can still be weak</h2>
+  <p>A single strong password reused across five services is safer than five weak passwords, but it still creates one shared point of failure. If any one of those services leaks it, the attacker does not need to guess anything else. They replay the same credential pair elsewhere.</p>
+  <p>This is why later units in this module focus on password managers, MFA, and passkeys. The fix is not just "try harder." It is to remove the pattern attackers depend on.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Immediate actions after this lesson</h2>
+  <ul class="lesson-checklist">
+    <li>Identify any password you know you reuse across work or personal accounts.</li>
+    <li>Start with your email account, because it often controls password resets for everything else.</li>
+    <li>Assume older breaches still matter unless you have already changed the password everywhere it was reused.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "For each worker, choose the attack method that creates the most risk.",
+  "questions": [
+    {
+      "prompt": "Anika reuses one strong password across her email, bank, and three online stores.",
+      "options": [
+        {"text": "Credential stuffing", "correct": true, "feedback": "Right: when one of those stores is breached, attackers try the pair on every other site."},
+        {"text": "Dictionary attack", "correct": false, "feedback": "The password is strong, so guessing is not the issue. Reuse is."},
+        {"text": "Phishing", "correct": false, "feedback": "Possible, but the structural weakness here is reuse."}
+      ]
+    },
+    {
+      "prompt": "Ben's password is Summer2024! and he uses it only on his work account.",
+      "options": [
+        {"text": "Credential stuffing", "correct": false, "feedback": "Reuse is not the issue here: there is one account. Predictability is."},
+        {"text": "Dictionary attack", "correct": true, "feedback": "Right: Season+Year+! is a tiny pattern that attack tools generate by the millions."},
+        {"text": "Physical theft", "correct": false, "feedback": "Possible, but not what makes this password specifically risky."}
+      ]
+    },
+    {
+      "prompt": "Carla received an email from 'IT' asking her to confirm her password on a login page that looks identical to her company portal.",
+      "options": [
+        {"text": "Phishing", "correct": true, "feedback": "Right: strong passwords do not protect against typing them into a fake page."},
+        {"text": "Credential stuffing", "correct": false, "feedback": "This is a direct theft via fake page, not reuse-driven."},
+        {"text": "Dictionary attack", "correct": false, "feedback": "No guessing is happening: Carla is being asked to hand it over."}
+      ]
+    },
+    {
+      "prompt": "Dan thinks his accounts are not interesting to attackers because he 'has nothing worth stealing'.",
+      "options": [
+        {"text": "Targeted spear-phishing", "correct": false, "feedback": "Spear-phishing is for high-value targets. Dan's risk is broader."},
+        {"text": "Opportunistic account abuse", "correct": true, "feedback": "Right: accounts are valuable for resetting other accounts, sending phishing, and as launchpads, regardless of who Dan is."},
+        {"text": "Dictionary attack", "correct": false, "feedback": "Possible, but the underlying mistake is the assumption that he is not a target."}
+      ]
+    },
+    {
+      "prompt": "Esi's password leaked in a 2022 breach she never heard about. She still uses it.",
+      "options": [
+        {"text": "Credential stuffing", "correct": true, "feedback": "Right: leaked credentials sit in criminal databases and get tried on other sites for years."},
+        {"text": "Phishing", "correct": false, "feedback": "Phishing is a separate vector. The leaked password is the live risk here."},
+        {"text": "Dictionary attack", "correct": false, "feedback": "It does not need to be guessed: it is already in a list."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Passwords fail in predictable ways. Once you understand the method of failure, the later fixes in this module stop feeling like extra chores and start looking like direct defenses.</p>
+</section>

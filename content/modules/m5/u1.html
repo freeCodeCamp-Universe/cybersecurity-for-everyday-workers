@@ -1,0 +1,59 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Many people still picture a coffee-shop attacker reading passwords off the air. For most mainstream HTTPS sites, that is no longer the normal risk. The real danger today is more often fake networks, fake login pages, or warnings users click past.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>With HTTPS now the default on most of the web, an attacker on the same network can usually see which sites you connect to, but not the actual page contents or form data inside a properly encrypted session.</p>
+  <p>That does not mean the network is harmless. It means the threat model changed. The question is less "Can they read my traffic?" and more "Can they steer me to the wrong place or exploit a weaker app or warning?"</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What HTTPS hides and what it does not</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Usually hidden</h3>
+      <p>Page contents, submitted passwords, cookies, and data you send to the site.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Still visible in most configurations</h3>
+      <p>The domains you connect to, the timing and size of requests, and anything sent outside proper encryption. Newer privacy-preserving DNS and TLS features are reducing domain visibility in some setups, but most networks still expose it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Update your mental model</h2>
+  <ul class="lesson-checklist">
+    <li>Expect mainstream sites to use HTTPS by default.</li>
+    <li>Stay focused on fake networks, fake portals, and browser warnings.</li>
+    <li>Assume insecure apps and non-HTTPS destinations still deserve special caution.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "sort",
+  "instructions": "Sort each statement as true or false in 2026 (assuming the site is HTTPS).",
+  "categories": ["True", "False"],
+  "items": [
+    {"text": "An attacker on the same Wi-Fi can see the contents of pages you load over HTTPS.", "category": "False", "explanation": "HTTPS encrypts the page content."},
+    {"text": "An attacker can see which domains (e.g. bank.com) you connect to.", "category": "True", "explanation": "DNS and server IPs leak the domain."},
+    {"text": "An attacker can read your password as you type it into an HTTPS login.", "category": "False", "explanation": "The form data is encrypted in transit."},
+    {"text": "A rogue Wi-Fi network can serve you a fake login page even in 2026.", "category": "True", "explanation": "Rogue networks plus fake captive portals are the modern threat."},
+    {"text": "Browser warnings about certificate problems can be safely ignored.", "category": "False", "explanation": "Treat warnings as real signals."},
+    {"text": "Mobile data is generally harder to impersonate than open Wi-Fi.", "category": "True", "explanation": "Carrier networks are not as easy to spoof as a Wi-Fi SSID."}
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Modern encryption hides what you do on a site. The practical risk now is more about whether the connection is genuine than about reading the contents in transit.</p>
+</section>

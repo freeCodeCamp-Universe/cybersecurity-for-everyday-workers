@@ -1,0 +1,51 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>The worst time to discover the reporting path is while your account may already be compromised. Incident channels should be known before the stressful moment, not searched for during it.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Every organization has a reporting path. The problem is usually not that it does not exist, but that people do not know it until they need it.</p>
+  <p>A good report route depends on the type of incident and whether your normal device or account can still be trusted. That is why finding the paths in advance is itself part of readiness.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What your first report should include</h2>
+  <ul class="lesson-checklist">
+    <li>What you saw.</li>
+    <li>When it happened.</li>
+    <li>What you did so far.</li>
+    <li>What you have not done yet.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Save the urgent channels off-device</h2>
+  <p>If your phone or laptop is the thing that may be compromised or missing, the reporting path needs to exist somewhere else too. A card, notebook, or another trusted device is enough.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the best reporting channel for each incident type.",
+  "prompt_header": "Incident",
+  "columns": ["Report Phishing button / security mailbox", "IT helpdesk phone", "Manager / business lead", "Out-of-band from another device"],
+  "rows": [
+    {"prompt": "Suspicious phishing email with no click yet", "correct_column": "Report Phishing button / security mailbox", "explanation": "Routine phishing reports should go through the phishing/security channel."},
+    {"prompt": "Lost laptop containing work data", "correct_column": "IT helpdesk phone", "explanation": "A lost device needs immediate voice-channel escalation."},
+    {"prompt": "Your own account may already be compromised", "correct_column": "Out-of-band from another device", "explanation": "Do not trust the possibly compromised account or device to report itself."},
+    {"prompt": "A teammate may need to coordinate a business response after customer data exposure", "correct_column": "Manager / business lead", "explanation": "Management often must be looped in for operational response."}
+  ],
+  "feedback_correct": "Correct: incident channel choice depends on urgency and whether the usual device/account is still trustworthy."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Find the reporting paths before you need them. Preparation removes hesitation when speed matters most.</p>
+</section>

@@ -1,0 +1,65 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Supply chain attacks are unsettling because they arrive through things you were right to trust: a vendor, an update, a partner, or a long-installed extension. The worker did not make the original mistake, but still needs to react well.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>A supply chain attack compromises a trusted provider or partner and uses that trust to reach customers downstream.</p>
+  <p>This is one attack category where front-line vigilance has limits. Workers cannot usually inspect vendor internals. Their role is to notice unusual behavior in trusted tools and report it quickly.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What workers can realistically do</h2>
+  <ul class="lesson-checklist">
+    <li>Notice when a trusted tool suddenly asks for new permissions or behaves unexpectedly.</li>
+    <li>Report unusual prompts, data flows, or vendor communications instead of assuming they are normal.</li>
+    <li>Keep updating software anyway; rare compromised updates do not outweigh the value of patching known flaws.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Supply chain attack: yes or no?",
+  "questions": [
+    {
+      "prompt": "An update to a development tool you trust ships malicious code that exfiltrates source repositories.",
+      "options": [
+        {"text": "Supply chain attack", "correct": true, "feedback": "Right: trust in the vendor was abused."},
+        {"text": "Phishing", "correct": false, "feedback": "No deceptive message: the update came through the normal channel."}
+      ]
+    },
+    {
+      "prompt": "An attacker emails you a fake invoice with a malicious attachment.",
+      "options": [
+        {"text": "Supply chain attack", "correct": false, "feedback": "This is direct phishing: no abuse of a trusted vendor channel."},
+        {"text": "Phishing", "correct": true, "feedback": "Right: direct social attack on you."}
+      ]
+    },
+    {
+      "prompt": "A managed-service provider that supports your IT team is breached, and the attackers use that access to reach your systems.",
+      "options": [
+        {"text": "Supply chain attack", "correct": true, "feedback": "Right: the trusted partner's compromise reaches you."},
+        {"text": "Insider threat", "correct": false, "feedback": "Not an insider: a trusted external partner was compromised."}
+      ]
+    },
+    {
+      "prompt": "A browser extension you installed two years ago is sold to a new owner, who pushes an update that injects ads and tracking.",
+      "options": [
+        {"text": "Supply chain attack", "correct": true, "feedback": "Right: extension sale-and-rewrite is a documented supply-chain risk."},
+        {"text": "Personal device theft", "correct": false, "feedback": "No device was stolen: the update channel was abused."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Supply chain attacks come through trusted channels. The worker's job is not to predict them all, but to notice abnormal behavior and escalate quickly.</p>
+</section>

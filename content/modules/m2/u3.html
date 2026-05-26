@@ -1,0 +1,102 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>You ignore a suspicious email, then get a text from "the courier," a phone call from "IT," and a late-night MFA prompt you did not start. The channel changed, but the attack did not.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Email is only one delivery path. Attackers also use text messages, phone calls, QR codes, and authentication prompts because each channel can feel more immediate and less filtered.</p>
+  <p>The defense does not need to change every time the channel changes. The core questions stay the same: who is asking, what are they asking for, and how can I verify this without using the suspicious message itself?</p>
+</section>
+
+<section class="lesson-section">
+  <h2>How the channels differ</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Smishing</h3>
+      <p>Texts feel personal and urgent, and mobile previews hide more detail than email clients do.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Vishing</h3>
+      <p>Caller ID is easy to spoof, and voice pressure can feel more socially difficult to resist.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Quishing</h3>
+      <p>QR codes hide the destination entirely until scanned, which makes them equivalent to blind links.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>MFA fatigue</h3>
+      <p>Repeated prompts are designed to wear you down into approving one by mistake.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>People trust channels differently</h2>
+  <p>Many users are more skeptical of email than of texts, calls, or QR codes. Attackers know that. A call can feel more real than an email. A QR code can feel more official than a link. The social pressure changes shape, but the verification rule should not.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>One rule across every channel</h2>
+  <ul class="lesson-checklist">
+    <li>Never approve an MFA prompt you did not start yourself.</li>
+    <li>Never give a code or password to a caller who contacted you first.</li>
+    <li>Treat unsolicited QR codes and shortened SMS links like unknown links.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "match",
+  "instructions": "Match each scenario to the channel it uses.",
+  "left": [
+    "Text from 'DHL' with a shortened link asking you to confirm delivery details",
+    "Caller claims to be IT and asks for the code on your screen",
+    "Poster in the lobby with a QR code for 'free Wi-Fi sign-up'",
+    "Repeated MFA push notifications at 2am that you didn't trigger",
+    "Email saying 'expect a call from our auditor in 10 minutes' followed by a real call"
+  ],
+  "right": ["Smishing", "Vishing", "Quishing", "MFA fatigue", "Hybrid"],
+  "answers": {
+    "Text from 'DHL' with a shortened link asking you to confirm delivery details": "Smishing",
+    "Caller claims to be IT and asks for the code on your screen": "Vishing",
+    "Poster in the lobby with a QR code for 'free Wi-Fi sign-up'": "Quishing",
+    "Repeated MFA push notifications at 2am that you didn't trigger": "MFA fatigue",
+    "Email saying 'expect a call from our auditor in 10 minutes' followed by a real call": "Hybrid"
+  }
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the correct response.",
+  "questions": [
+    {
+      "prompt": "Repeated MFA push notifications appear on your phone overnight.",
+      "options": [
+        {"text": "Approve one to make them stop", "correct": false, "feedback": "That hands the attacker your account."},
+        {"text": "Deny all and report: your password is likely compromised", "correct": true, "feedback": "Right: deny, then change the password and report."},
+        {"text": "Ignore and go back to sleep", "correct": false, "feedback": "Even if you deny, the password reuse needs to be addressed."}
+      ]
+    },
+    {
+      "prompt": "A QR code on an unsolicited poster offers 'free conference Wi-Fi'.",
+      "options": [
+        {"text": "Scan it: QR codes are safer than links", "correct": false, "feedback": "QR codes hide their destination. Treat them like unsolicited links."},
+        {"text": "Skip it; use the official network printed on your badge", "correct": true, "feedback": "Right: verify network names from official signage, not posters."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Phishing reaches you through any channel where decisions get made. The safer response is not memorizing channel-specific trivia; it is applying the same verification habit everywhere.</p>
+</section>

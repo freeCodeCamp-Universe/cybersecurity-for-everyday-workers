@@ -1,0 +1,81 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Access is usually granted with care and removed with forgetfulness. That is why so many access problems come from old contractors, past job roles, and systems nobody remembers to revisit.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Access has a lifecycle. The grant is often visible and deliberate; the revoke is where many organizations quietly fail.</p>
+  <p>Thinking in lifecycle terms makes access a process instead of a one-time event. The risk is not just "who has access today," but "what triggers change tomorrow, and who is supposed to act?"</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The three lifecycle stages</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div><strong>Grant:</strong> the request, approval, and ownership need to be documented clearly.</div></li>
+    <li><span class="lesson-step-number">2</span><div><strong>Use:</strong> the access should match the intended job, not drift into unrelated purposes.</div></li>
+    <li><span class="lesson-step-number">3</span><div><strong>Revoke:</strong> role change, project end, or departure should actively remove the access.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>The "temporary" grant that becomes permanent</h2>
+  <p>Many excess-access problems start with a legitimate short-term need that never got a review date. Time-bound access and periodic review are what keep the lifecycle from stopping after step one.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Where did the lifecycle fail?",
+  "questions": [
+    {
+      "prompt": "A contractor finished a project six months ago. They still have access to the shared drive.",
+      "options": [
+        {"text": "Grant", "correct": false, "feedback": "The grant was appropriate at the time: the project needed it."},
+        {"text": "Use", "correct": false, "feedback": "Misuse during the project would be a different problem."},
+        {"text": "Revoke", "correct": true, "feedback": "Right: revocation didn't happen at the end of the engagement."}
+      ]
+    },
+    {
+      "prompt": "A worker moved from Finance to Marketing six months ago. They still have edit access to the GL.",
+      "options": [
+        {"text": "Grant", "correct": false, "feedback": "Initial grant was correct."},
+        {"text": "Use (active misuse)", "correct": false, "feedback": "Possible separately, but the structural issue is revocation."},
+        {"text": "Revoke (role change)", "correct": true, "feedback": "Right: role changes should trigger revocation of role-specific access."}
+      ]
+    },
+    {
+      "prompt": "A service account's owner left the company. Nobody knows what credentials it has.",
+      "options": [
+        {"text": "Grant: the original grant lacked an owner-of-record", "correct": true, "feedback": "Right: service accounts need a documented owner; this is a grant-stage failure that compounds at revoke."},
+        {"text": "Use", "correct": false, "feedback": "The use is fine while it's working; the structural issue is ownership."},
+        {"text": "Revoke", "correct": false, "feedback": "Revocation is hard now precisely because grant didn't capture ownership."}
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the missing control that would have prevented each lifecycle failure.",
+  "prompt_header": "Case",
+  "columns": ["End-date / revoke trigger", "Role-change review", "Owner-of-record"],
+  "rows": [
+    {"prompt": "A contractor still has access six months after the project ended", "correct_column": "End-date / revoke trigger", "explanation": "Temporary access should have a clear revoke trigger."},
+    {"prompt": "A worker moved teams but kept finance access", "correct_column": "Role-change review", "explanation": "Role changes should trigger an access review and removal."},
+    {"prompt": "No one knows who owns a service account after an employee leaves", "correct_column": "Owner-of-record", "explanation": "Service accounts need a documented owner from the start."}
+  ],
+  "feedback_correct": "Correct: most lifecycle failures come from missing ownership, review triggers, or revoke steps."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Access is granted once and forgotten many times. Most of the real risk lives in the forgetting.</p>
+</section>

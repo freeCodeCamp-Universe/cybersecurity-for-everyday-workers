@@ -1,0 +1,86 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Imran gets a fake login link that perfectly imitates a familiar website. If he were using a password, he could hand it over by mistake. If the account uses a passkey, the fake site cannot use it because the login method is tied to the real website.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>A passkey replaces the shared secret model of passwords with a cryptographic key pair stored on a trusted device.</p>
+  <p>In simple terms, the site keeps a public lock and your device keeps the private key that opens it. Your device proves it has the right key without sending the key itself across the internet. That means there is no password for the site to store and no password for you to type into a fake page.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Why passkeys feel different in practice</h2>
+  <p>With a passkey, the login usually becomes a device prompt: unlock with your fingerprint, face, or PIN, and the device completes the proof. The experience can feel simpler than a password, but the security model underneath is much stronger because the secret never becomes a shared thing.</p>
+  <p>This is why passkeys are especially useful against credential phishing. A fake site can copy the appearance of the real one, but it cannot make your device use a passkey registered to a different domain.</p>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">What changes</span>
+  <h2>Password vs passkey</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Password</h3>
+      <p>Shared secret. Both you and the website know it, so it can be stolen from either side or typed into a fake site.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Passkey</h3>
+      <p>Private key stays on your device. The website only stores the matching public key, which is useless for logging in by itself.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Important limit</span>
+  <h2>What passkeys do not solve</h2>
+  <p>Passkeys are excellent against password theft and phishing, but they do not make device security irrelevant. If the device itself is badly compromised, the attacker may still gain access by other means. They also are not supported on every service yet, so this is a "use where available" upgrade, not a universal replacement today.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>How to adopt passkeys safely</h2>
+  <ul class="lesson-checklist">
+    <li>Start with one account you use often and that already supports passkeys.</li>
+    <li>Know which device or account ecosystem will store and sync the passkey.</li>
+    <li>Keep a backup sign-in or recovery method in case the device is lost.</li>
+    <li>Use passkeys first on high-value accounts where phishing would hurt most.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Set up a passkey on one supported account.",
+  "items": [
+    "Identified a service that supports passkeys (check the FIDO Alliance Passkey Central directory)",
+    "Picked the device that will hold the passkey",
+    "Completed the passkey enrollment flow on that account",
+    "Logged out and logged back in using the passkey",
+    "Confirmed a working backup login method still exists"
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the safest backup or follow-up for each passkey scenario.",
+  "prompt_header": "Scenario",
+  "columns": ["Add a backup sign-in method", "Use this device as the passkey holder", "Move to a device you control", "Use password-only for now"],
+  "rows": [
+    {"prompt": "You enabled a passkey on a shared family tablet.", "correct_column": "Move to a device you control", "explanation": "Passkeys should live on a device the worker controls."},
+    {"prompt": "You set up a passkey but have no recovery option if the phone is lost.", "correct_column": "Add a backup sign-in method", "explanation": "A recovery path is required before relying on the passkey."},
+    {"prompt": "You want to use the work phone you carry daily and keep locked with biometrics.", "correct_column": "Use this device as the passkey holder", "explanation": "A personal, secured daily-use device is an appropriate passkey holder."},
+    {"prompt": "A service supports passkeys but you only access it from borrowed hotel-business-center devices.", "correct_column": "Use password-only for now", "explanation": "Do not enroll a passkey onto devices you do not control."}
+  ],
+  "feedback_correct": "Correct: passkeys are strongest when tied to a personal, trusted device with backup access."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>A passkey removes the need to remember or type a password for that account. Where support exists, it is one of the cleanest upgrades in this whole module.</p>
+</section>

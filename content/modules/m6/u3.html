@@ -1,0 +1,59 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A shared account can look efficient because everyone knows the same password. It only becomes expensive later, when nobody can tell who did what, access survives offboarding, and the password ends up in chat, on paper, or in memory long after it should have changed.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Shared accounts save setup time and destroy accountability. They usually signal that a better pattern should have been used instead.</p>
+  <p>Sometimes an old system or a service account makes an exception unavoidable. But "unavoidable" is different from "normal," and the handling standard should rise accordingly.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What shared accounts break</h2>
+  <ul class="lesson-checklist">
+    <li>You lose reliable audit trails because the login no longer maps to one person.</li>
+    <li>Offboarding becomes fragile because one departure should trigger password rotation for everyone.</li>
+    <li>Convenience encourages weak storage habits such as notes, chat messages, or reused passwords.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Replace or contain</h2>
+  <p>Prefer individual accounts, shared mailboxes, group-based access, or service accounts with documented ownership. If a shared login truly cannot be removed yet, store it in a shared vault with named access and review it on a fixed schedule.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "match",
+  "instructions": "For each setup, pick the better pattern.",
+  "left": [
+    "Five team members log into one 'support@' email account using a shared password",
+    "Three reception staff use 'frontdesk' on a shared tablet to clock in",
+    "An old reporting tool only supports one login; ten analysts share it",
+    "A printer's admin password is taped under the lid"
+  ],
+  "right": [
+    "Shared mailbox with individual logins (most platforms support this)",
+    "Individual accounts with role-based access",
+    "Service account with credentials in a vault, named-access, audited",
+    "Stored in a vault, not on the device"
+  ],
+  "answers": {
+    "Five team members log into one 'support@' email account using a shared password": "Shared mailbox with individual logins (most platforms support this)",
+    "Three reception staff use 'frontdesk' on a shared tablet to clock in": "Individual accounts with role-based access",
+    "An old reporting tool only supports one login; ten analysts share it": "Service account with credentials in a vault, named-access, audited",
+    "A printer's admin password is taped under the lid": "Stored in a vault, not on the device"
+  }
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Shared accounts trade accountability for short-term convenience. Replace them where you can, and manage them like risky exceptions where you cannot.</p>
+</section>

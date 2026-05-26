@@ -1,0 +1,67 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Ransomware rarely appears out of nowhere. It usually follows the same earlier mistakes other attacks use: a click, an unpatched device, shared credentials, or weak segmentation. The difference is the scale of disruption at the end.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Ransomware encrypts files and demands payment for recovery. Some modern variants also steal data before encrypting it, a tactic known as double extortion, which means the problem is both downtime and exposure.</p>
+  <p>The worker-level lesson is not "memorize every ransomware family." It is "recognize how ordinary security habits interrupt the chain before encryption begins."</p>
+</section>
+
+<section class="lesson-section">
+  <h2>How ransomware grows</h2>
+  <ul class="lesson-checklist">
+    <li>It gets in through the same kinds of paths as other attacks.</li>
+    <li>It spreads by exploiting saved credentials, shared drives, and reachable systems.</li>
+    <li>It hurts more when backups are weak or writable from the compromised device.</li>
+    <li>Fast reporting and isolation still matter even after the malware has started.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Immediate response if you suspect it</h2>
+  <p>Disconnect the device from the network, do not power it off unless instructed, and report immediately. The goal is to slow spread while preserving the best chance of recovery and investigation.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "order",
+  "instructions": "Arrange the steps of a ransomware attack in order using the up/down arrows.",
+  "items": [
+    "Worker clicks a phishing attachment",
+    "Malware runs and contacts the attacker's server",
+    "Attacker harvests credentials saved on the device",
+    "Attacker logs into a shared file server using stolen credentials",
+    "Attacker exfiltrates copies of files for double-extortion",
+    "Attacker encrypts files across reachable shares",
+    "Ransom note appears demanding payment"
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Match each ransomware step to the worker-level practice that most directly raises attacker cost.",
+  "prompt_header": "Attack step",
+  "columns": ["Phishing recognition", "Patching / software hygiene", "Password manager / secret handling", "Unique passwords + MFA", "Independent backups"],
+  "rows": [
+    {"prompt": "Worker clicks a phishing attachment", "correct_column": "Phishing recognition", "explanation": "Recognition and reporting are the first defense."},
+    {"prompt": "Malware runs after exploiting an avoidable weakness", "correct_column": "Patching / software hygiene", "explanation": "Updated, cleaner systems reduce successful execution."},
+    {"prompt": "Attacker harvests saved credentials from the device", "correct_column": "Password manager / secret handling", "explanation": "Avoiding plaintext secrets reduces the harvest value."},
+    {"prompt": "Attacker reuses credentials on shared systems", "correct_column": "Unique passwords + MFA", "explanation": "These controls break lateral reuse."},
+    {"prompt": "Files across reachable shares are encrypted", "correct_column": "Independent backups", "explanation": "Recovery depends on backups outside attacker write reach."}
+  ],
+  "feedback_correct": "Correct: each practice raises cost at a different point in the ransomware chain."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Ransomware compounds earlier security failures. The realistic answer is a stack of ordinary defenses applied together.</p>
+</section>

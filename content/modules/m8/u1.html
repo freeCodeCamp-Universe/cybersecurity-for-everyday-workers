@@ -1,0 +1,64 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>An incident often has a short window where fast reporting can keep it small. After that, the same event may become a much more expensive investigation. The difference is usually minutes or hours, not days.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Most incidents grow during the gap between the first signal and the first report. Speed of reporting, not perfection of reporting, is what limits damage.</p>
+  <p>Workers often think they should investigate first or wait until they know more. In practice, that delay is exactly what allows phishing, ransomware, and data-exposure incidents to spread.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Why the first hour matters</h2>
+  <ul class="lesson-checklist">
+    <li>Security teams can isolate devices, disable sessions, recall messages, or block spread only after they know.</li>
+    <li>False alarms are cheap; hidden incidents are expensive.</li>
+    <li>Reporting is not the same as fixing. Your job is to start the response, not complete it alone.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Choose speed over certainty</h2>
+  <p>If you are torn between "I should look into this myself" and "I should tell the team now," the safer default is to tell the team now. You can always add detail after the first report.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Same event, two timelines. Pick the better choice at each decision point.",
+  "questions": [
+    {
+      "prompt": "9:02am: you click a phishing link, then notice the URL is wrong.",
+      "options": [
+        {"text": "Quietly close the tab and hope nothing happened", "correct": false, "feedback": "Hiding it lets the attack grow."},
+        {"text": "Report immediately, even though you're not sure of impact", "correct": true, "feedback": "Right: early report buys the security team time to contain."}
+      ]
+    },
+    {
+      "prompt": "9:15am: you start wondering if you should investigate first.",
+      "options": [
+        {"text": "Search browser history for what the page looked like before reporting", "correct": false, "feedback": "Investigation eats minutes; the team can do it faster."},
+        {"text": "Report what you saw: let the team investigate", "correct": true, "feedback": "Right: reporting is not the same as fixing."}
+      ]
+    },
+    {
+      "prompt": "10:00am: you're embarrassed and considering not reporting at all.",
+      "options": [
+        {"text": "Don't report; finish the day and re-evaluate tomorrow", "correct": false, "feedback": "By tomorrow the attacker may have used the credential. Cost grows fast."},
+        {"text": "Report now: the cost of a false alarm is minutes; a hidden incident grows for hours", "correct": true, "feedback": "Right: speed beats embarrassment every time."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>The cheapest part of incident response is the report. Make it fast and rough instead of slow and complete.</p>
+</section>

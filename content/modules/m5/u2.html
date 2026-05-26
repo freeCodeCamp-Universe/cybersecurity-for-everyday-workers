@@ -1,0 +1,87 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>"Wi-Fi is Wi-Fi" is a bad mental shortcut. A home router you control, a corporate network your employer manages, and a public hotspot anyone can imitate do not deserve the same assumptions.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Different Wi-Fi networks have different trust models. Safe behavior depends on what you can verify about the network, not just on whether the connection works.</p>
+  <p>Public Wi-Fi is not automatically unusable, but it is also not equivalent to trusted networks. The biggest error is treating network names and physical location as proof that the network is genuine.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The three baseline trust models</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Home Wi-Fi</h3>
+      <p>Mostly under your control. Router settings and device hygiene matter most.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Work Wi-Fi</h3>
+      <p>Usually managed by IT, with separate networks for guest or personal devices for a reason.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Public Wi-Fi</h3>
+      <p>Unknown ownership and easy impersonation. Good for routine work with care; weaker for sensitive first-time logins.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Simple network choices</h2>
+  <ul class="lesson-checklist">
+    <li>Use mobile data for short, sensitive tasks when it is practical.</li>
+    <li>Use public Wi-Fi more confidently for routine HTTPS browsing than for high-stakes logins or setup changes.</li>
+    <li>Verify official network names from trusted signage or staff, not from the broadcast name alone.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the appropriate network for each task.",
+  "questions": [
+    {
+      "prompt": "Logging into your bank from a cafe.",
+      "options": [
+        {"text": "Open cafe Wi-Fi", "correct": false, "feedback": "Acceptable for routine HTTPS browsing, but rogue-network risk makes mobile data better here."},
+        {"text": "Mobile data (tether to your phone)", "correct": true, "feedback": "Right: for sensitive logins, harder-to-impersonate is the better choice."},
+        {"text": "Cafe Wi-Fi without HTTPS check", "correct": false, "feedback": "Always check for HTTPS, regardless of network."}
+      ]
+    },
+    {
+      "prompt": "Checking email from a hotel lobby network.",
+      "options": [
+        {"text": "Hotel Wi-Fi, with HTTPS confirmed", "correct": true, "feedback": "Right: routine browsing is fine on hotel Wi-Fi as long as HTTPS is in use."},
+        {"text": "Hotel Wi-Fi, no checks", "correct": false, "feedback": "Confirm HTTPS and watch for fake captive portals."},
+        {"text": "Skip: wait until you're home", "correct": false, "feedback": "Unnecessary; routine email is fine on a verified hotel network."}
+      ]
+    },
+    {
+      "prompt": "Joining a video call about a confidential project from the airport.",
+      "options": [
+        {"text": "Airport Wi-Fi, no precautions", "correct": false, "feedback": "Confidential discussion in a public place leaks via audio regardless of network."},
+        {"text": "Airport Wi-Fi or mobile data: but with privacy filter and headphones, away from neighbors", "correct": true, "feedback": "Right: physical confidentiality matters more than network here."},
+        {"text": "Wait until you reach a private space", "correct": false, "feedback": "Often the right call for highly sensitive content. Either way, the physical setting is the issue."}
+      ]
+    },
+    {
+      "prompt": "Working on a draft document from home Wi-Fi.",
+      "options": [
+        {"text": "Home Wi-Fi", "correct": true, "feedback": "Right: your network, your trust model. Make sure router basics are in place (Module 5, Unit 5)."},
+        {"text": "VPN required", "correct": false, "feedback": "Only if your employer requires it. Routine work over home Wi-Fi is fine."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Match your behavior to what you can verify about the network. The main public-Wi-Fi risk now is impersonation and poor judgment under uncertainty, not magical visibility into every HTTPS page.</p>
+</section>

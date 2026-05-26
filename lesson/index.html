@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../src/assets/favicon-32x32.png" />
+    <title>Lesson · Cybersecurity for Everyday Workers</title>
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <link rel="stylesheet" href="../src/styles/base.css" />
+    <link rel="stylesheet" href="../src/styles/components.css" />
+  </head>
+  <body class="dark-palette">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <a href="../" class="brand">
+        <span class="prompt">$</span>cybersecurity-for-workers
+      </a>
+      <a href="../" class="header-link">all modules</a>
+    </header>
+
+    <div class="lesson-layout">
+      <nav class="lesson-sidebar" id="lesson-sidebar" aria-label="Course navigation">
+        <div class="sidebar-top">
+          <span class="sidebar-top-label">Course</span>
+          <button class="sidebar-collapse-btn" id="sidebar-collapse-btn" aria-label="Collapse navigation" aria-expanded="true">‹</button>
+        </div>
+        <div class="sidebar-content" id="sidebar-content"></div>
+      </nav>
+
+      <main class="lesson-main" id="main-content">
+        <nav class="lesson-bar" aria-label="Lesson navigation">
+          <button class="sidebar-menu-btn" id="sidebar-menu-btn" aria-label="Open course navigation" aria-expanded="false">☰</button>
+          <a href="../" class="back-link">← All modules</a>
+          <span class="breadcrumb" id="breadcrumb"></span>
+        </nav>
+
+        <article id="lesson" class="lesson-shell">
+          <h1 id="lesson-title"></h1>
+          <div class="lesson-objective">
+            <div class="label">Objective</div>
+            <p id="lesson-objective"></p>
+          </div>
+          <div id="lesson-content" class="lesson-content">
+            <div id="lesson-body"></div>
+          </div>
+        </article>
+
+        <footer class="lesson-footer">
+          <button type="button" class="btn" id="complete-btn"></button>
+          <nav class="lesson-nav" aria-label="Adjacent lessons">
+            <a id="prev-link" href="#" class="nav-empty">← Previous</a>
+            <a id="next-link" href="#" class="nav-empty">Next →</a>
+          </nav>
+          <div class="lesson-reset">
+            <button type="button" class="btn-reset-lesson" id="reset-lesson-btn">Reset lesson</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+
+    <dialog id="module-dialog" class="congrats-dialog" aria-labelledby="module-dialog-title">
+      <div class="congrats-content">
+        <div class="congrats-icon" aria-hidden="true">✓</div>
+        <h2 class="congrats-title" id="module-dialog-title"></h2>
+        <p class="congrats-body" id="module-dialog-body"></p>
+        <div class="congrats-actions">
+          <button type="button" id="module-dialog-next" class="btn">Continue →</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="congrats-dialog" class="congrats-dialog" aria-labelledby="congrats-title">
+      <div class="congrats-content">
+        <div class="congrats-icon" aria-hidden="true">✓</div>
+        <h2 class="congrats-title" id="congrats-title">Course Complete!</h2>
+        <p class="congrats-body">You've finished all 60 lessons. Outstanding work.</p>
+        <div class="congrats-actions">
+          <a href="../" class="btn">Back to all modules</a>
+          <button type="button" id="congrats-close" class="btn btn--ghost">Close</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="../src/features/lesson/index.js"></script>
+  </body>
+</html>

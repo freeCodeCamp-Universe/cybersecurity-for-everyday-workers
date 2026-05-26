@@ -1,0 +1,112 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Owen is told to pick a "strong" password for a new HR system. He chooses <code>MyDog2019!</code> because it has a capital letter, numbers, and a symbol. It looks complicated, but it follows a pattern that attack tools already know extremely well.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Password strength is mainly about length and unpredictability, not about adding cosmetic complexity to a short, familiar phrase.</p>
+  <p>That is why current guidance has shifted away from rigid complexity rules and toward longer passwords or passphrases. A short password with symbols can still be predictable. A long random passphrase gives attackers far more combinations to work through.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What actually makes a password strong</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div><strong>Use length first.</strong> Every additional character increases the number of possible combinations an attacker must try.</div></li>
+    <li><span class="lesson-step-number">2</span><div><strong>Use randomness, not personal meaning.</strong> Four random words are stronger than a quote, lyric, pet name, or date you would naturally remember.</div></li>
+    <li><span class="lesson-step-number">3</span><div><strong>Keep rule-following minimal.</strong> If a site demands a capital letter or symbol, add it without shrinking the length or removing the randomness.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--myth">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Why complexity rules mislead people</h2>
+  <p>Rules like "one capital, one number, one symbol" were meant to make short passwords a little harder to guess. In practice, they trained people into a few repeated patterns: a capital first letter, a year at the end, and one symbol like <code>!</code>. Attack tools now generate those patterns automatically.</p>
+  <p><code>NIST SP 800-63B</code> (2017, revised in 2022 draft) guidance favors allowing longer passwords and screening them against known breached-password lists. Some workplaces still require older-style complexity rules because of policy or compliance. When that happens, the best move is to keep the passphrase long and random, then satisfy the rule with one small change.</p>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Compare</span>
+  <h2>Two passwords that feel different to a human</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Looks strong, but is patterned</h3>
+      <p><code>Summer2026!</code> is short, uses a common word, a current year, and a common symbol placement.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Looks plain, but is stronger</h3>
+      <p><code>river lantern pebble cactus</code> is longer and much less predictable if the words were chosen randomly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What good looks like</span>
+  <h2>How to build a workable passphrase</h2>
+  <ul class="lesson-checklist">
+    <li>Choose 4 or 5 random words, not a sentence you would normally say.</li>
+    <li>If required, add one capital letter and one symbol without shortening the phrase.</li>
+    <li>Avoid names, birthdays, seasons, company names, and keyboard patterns.</li>
+    <li>If the site rejects spaces, join the words without making them more predictable.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the stronger choice in each pair.",
+  "questions": [
+    {
+      "prompt": "Which password is harder for attack tools to crack?",
+      "options": [
+        {"text": "Tr0ub4dor&3", "correct": false, "feedback": "Short, with predictable substitutions that attack tools model."},
+        {"text": "correct horse battery staple", "correct": true, "feedback": "Right: four random words is far longer and far less predictable. (These examples are based on established passphrase guidance.)"}
+      ]
+    },
+    {
+      "prompt": "Which is closest to current NIST guidance?",
+      "options": [
+        {"text": "Force users to change passwords every 90 days.", "correct": false, "feedback": "NIST 2024 discourages mandatory periodic rotation unless there is a sign of compromise."},
+        {"text": "Allow long passphrases and check them against breach lists.", "correct": true, "feedback": "Right: length plus breach checks is the current recommendation."}
+      ]
+    },
+    {
+      "prompt": "Your company requires one capital letter and one symbol. Which is the better way to satisfy the rule?",
+      "options": [
+        {"text": "Append a capital and a symbol to a memorable phrase: 'Welcome2025!'", "correct": false, "feedback": "Short, predictable, and exactly the pattern attack tools generate."},
+        {"text": "Use a long random passphrase and capitalize one word, append one symbol: 'maple Lantern velvet anchor!'", "correct": true, "feedback": "Right: keep length and randomness, satisfy the rule with a single tweak."}
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "multiquiz",
+  "instructions": "Select every passphrase that meets the lesson's strength rule.",
+  "questions": [
+    {
+      "prompt": "Which options are strong passphrase choices?",
+      "options": [
+        {"text": "river lantern pebble cactus", "correct": true},
+        {"text": "Welcome2026!", "correct": false},
+        {"text": "Maple anchor velvet stove!", "correct": true},
+        {"text": "MyDog2019!", "correct": false},
+        {"text": "correct-horse-battery-staple", "correct": true}
+      ],
+      "correct_indices": [0, 2, 4],
+      "feedback_correct": "Correct: long, random multi-word phrases are the right pattern.",
+      "feedback_incorrect": "Keep only the long, low-pattern passphrases. Remove short personal or year-based patterns."
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>A long, randomly built passphrase is stronger than a short, complicated-looking password. Build around length first, then satisfy any extra site rules with the smallest possible tweak.</p>
+</section>

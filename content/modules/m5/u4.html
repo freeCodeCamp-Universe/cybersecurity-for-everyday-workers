@@ -1,0 +1,72 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Browser warnings often appear at exactly the moment people most want them gone: when they are trying to log in, connect to Wi-Fi, or finish something quickly. Attackers and misconfigurations both benefit when users treat warnings as background noise.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>When a browser shows a security warning, it is reporting a real failure in the trust system, not merely being overcautious.</p>
+  <p>The right response is not always panic, but it is almost never "click through and hope." A warning means the browser cannot confirm that the secure connection is what it should be.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What the browser is telling you</h2>
+  <ul class="lesson-checklist">
+    <li>The padlock means the connection is encrypted and the certificate matches the site name.</li>
+    <li>The padlock does not mean the site is honest; phishing sites can also have valid certificates.</li>
+    <li>A certificate warning means the trust chain failed and sensitive actions should stop there.</li>
+    <li>Captive portals can briefly look strange, but they are not the place to enter account passwords unrelated to network access.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>A simple warning rule</h2>
+  <p>If the warning appears on a sensitive site or an internal system, do not proceed until you can verify the cause. For hotel or cafe captive portals, expect a short redirect, but still do not enter unrelated credentials into odd-looking overlays.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Choose the correct response.",
+  "questions": [
+    {
+      "prompt": "'Your connection is not private: NET::ERR_CERT_AUTHORITY_INVALID' on your bank's login page.",
+      "options": [
+        {"text": "Click through: probably a glitch", "correct": false, "feedback": "Never click through certificate errors on a sensitive site."},
+        {"text": "Do not proceed; try a different network or contact the bank by phone", "correct": true, "feedback": "Right: treat as a real failure of the trust system."}
+      ]
+    },
+    {
+      "prompt": "On an open hotel Wi-Fi, the first page you load redirects to a non-HTTPS captive portal asking for your room number.",
+      "options": [
+        {"text": "Expected on this kind of network", "correct": true, "feedback": "Right: captive portals look strange briefly. Wait for the legitimate portal page; don't enter passwords there."},
+        {"text": "Do not proceed at all", "correct": false, "feedback": "Captive portals are normal; just don't enter sensitive credentials."}
+      ]
+    },
+    {
+      "prompt": "An internal company site shows a certificate warning that names your company's internal authority.",
+      "options": [
+        {"text": "Click through: it's internal", "correct": false, "feedback": "If the workstation is set up correctly, internal CAs are trusted. A warning means something's off."},
+        {"text": "Contact IT before proceeding", "correct": true, "feedback": "Right: IT can confirm the certificate is legitimate or that there's an issue."}
+      ]
+    },
+    {
+      "prompt": "A login page suddenly shows a small overlay asking for your username and password again.",
+      "options": [
+        {"text": "Enter: the site reloaded", "correct": false, "feedback": "Phishing overlays imitate this exact pattern. Be suspicious."},
+        {"text": "Do not enter; navigate to the site freshly from a bookmark or typed URL", "correct": true, "feedback": "Right: never trust a login overlay you didn't initiate."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Treat browser security warnings as useful information, not nuisance. The padlock is necessary, but not enough on its own.</p>
+</section>

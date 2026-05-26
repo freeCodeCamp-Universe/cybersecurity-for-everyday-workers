@@ -1,0 +1,75 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>An unexpected file can look like ordinary work: invoice, scan, contract, onboarding packet. The danger is often decided before you open it, not after.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Files are a common malware delivery method. The check is simple, but it has to happen before opening, not after.</p>
+  <p>You do not need advanced technical analysis for most day-to-day decisions. You need a small gate that catches the most common bad cases: unexpected files, mismatched file types, and documents asking to run code.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The three-step check</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div>Was this expected in the current workflow?</div></li>
+    <li><span class="lesson-step-number">2</span><div>Is the sender really who they appear to be?</div></li>
+    <li><span class="lesson-step-number">3</span><div>Does the file type match the story being told?</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Important limit</span>
+  <h2>Macros and archives deserve extra suspicion</h2>
+  <p>Files that ask you to enable content are asking for permission to run code. Archives hide their contents until opened. PDFs can also contain links and scripts. "It is only a document" is not a safe assumption.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Apply the three-step check.",
+  "questions": [
+    {
+      "prompt": "Expected monthly invoice (PDF) from a vendor you spoke with this morning.",
+      "options": [
+        {"text": "Open", "correct": true, "feedback": "Right: expected, sender matches, file type matches the content."},
+        {"text": "Verify first", "correct": false, "feedback": "All three checks pass. Open it."},
+        {"text": "Report", "correct": false, "feedback": "No suspicious indicators."}
+      ]
+    },
+    {
+      "prompt": "Email titled 'Scan from printer' attached as a .zip: but your office has no scanner.",
+      "options": [
+        {"text": "Open", "correct": false, "feedback": "Unexpected, file type is wrong, sender is questionable. Don't open."},
+        {"text": "Verify first", "correct": false, "feedback": "There's nothing to verify: there is no scanner. This is the report case."},
+        {"text": "Report", "correct": true, "feedback": "Right: three failed checks. Report and don't open."}
+      ]
+    },
+    {
+      "prompt": "Unsolicited message from someone you don't know with a link to a 'shared file'.",
+      "options": [
+        {"text": "Open", "correct": false, "feedback": "Unexpected and unknown sender."},
+        {"text": "Verify first", "correct": false, "feedback": "There's no second channel to verify with: you don't know the person."},
+        {"text": "Report", "correct": true, "feedback": "Right: treat unsolicited file shares as phishing until proven otherwise."}
+      ]
+    },
+    {
+      "prompt": "A new contractor sends an archive (.zip) with their requested onboarding documents.",
+      "options": [
+        {"text": "Open", "correct": false, "feedback": "Expected, but archive from a new contact is worth a quick check."},
+        {"text": "Verify first via your established channel (call, message), then open", "correct": true, "feedback": "Right: light verification is cheap and removes ambiguity."},
+        {"text": "Report", "correct": false, "feedback": "No suspicious indicators yet, but verification is appropriate."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Three quick questions before opening anything: was it expected, who really sent it, and is the file type plausible for the task.</p>
+</section>

@@ -1,0 +1,63 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Most leaks are not dramatic database dumps. They are screenshots, chat messages, spreadsheet exports, meeting recordings, or test files that seemed ordinary in the moment.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Sensitive data hides inside routine artifacts. Most exposure happens because something was sensitive but did not feel sensitive while it was being handled.</p>
+  <p>Recognition is the core skill here. Once you notice the data, the right classification and handling usually follow. The hard part is spotting it in formats that do not look dangerous.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Where sensitive data often hides</h2>
+  <ul class="lesson-checklist">
+    <li>Support tickets, email threads, and spreadsheet exports.</li>
+    <li>Screenshots, photos, whiteboards, and meeting recordings.</li>
+    <li>Real customer data reused in test or demo environments.</li>
+    <li>Aggregated data that becomes sensitive when combined.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>A quick test for sensitivity</h2>
+  <p>Ask whether you would be comfortable if a screenshot of the artifact appeared on a public site. If the answer is no, the item is at least confidential and deserves more care than "routine work" treatment.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Choose the most sensitive label each everyday artifact actually contains.",
+  "prompt_header": "Artifact",
+  "columns": ["Public / low risk", "Internal", "Confidential", "Restricted"],
+  "rows": [
+    {"prompt": "A screenshot of a support ticket showing customer email and shipping address", "correct_column": "Confidential", "explanation": "PII inside a screenshot raises it above routine internal sharing."},
+    {"prompt": "A meeting photo that reveals a whiteboard with unreleased pricing", "correct_column": "Confidential", "explanation": "The hidden business content is the real classification driver."},
+    {"prompt": "A test dataset copied from real patient records", "correct_column": "Restricted", "explanation": "Real identifiable health data stays restricted even in testing."},
+    {"prompt": "A cropped screenshot of the public homepage before launch day", "correct_column": "Internal", "explanation": "Not yet public, but not necessarily restricted."}
+  ],
+  "feedback_correct": "Correct: routine artifacts often inherit the sensitivity of the information captured inside them."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Habit checks.",
+  "items": [
+    "Disabled chat notifications during screen-share",
+    "Reviewed any meeting recordings stored on shared platforms",
+    "Stopped using real customer data as test data",
+    "Set a habit of cropping screenshots to remove background content"
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Sensitive data is often the ordinary material you handled without naming it. Recognition is most of the job.</p>
+</section>

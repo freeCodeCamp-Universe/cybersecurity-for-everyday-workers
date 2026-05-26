@@ -1,0 +1,67 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Your home router is easy to ignore because it quietly works in the background. But it is the gateway every work device in your house depends on, and factory-default convenience is not the same thing as a safe setup.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Your home router is the gateway between your work and the open internet. Default settings are designed for easy installation, not strong security.</p>
+  <p>This does not mean you need enterprise networking skills. A small number of baseline settings handle most realistic home-network risk: strong admin access, strong Wi-Fi settings, updates, and separation between work devices and everything else.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The five baseline settings</h2>
+  <ul class="lesson-checklist">
+    <li>Change the default router admin password.</li>
+    <li>Use WPA3 if supported, or WPA2 with a long unique passphrase.</li>
+    <li>Keep firmware updated.</li>
+    <li>Use a guest network for visitors and smart-home devices when possible.</li>
+    <li>Disable remote management and UPnP unless there is a specific reason to keep them on.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Why separation matters</span>
+  <h2>Your smart bulb is not a work device</h2>
+  <p>A poorly maintained TV, camera, toy, or smart bulb does not need to cause a dramatic attack to matter. If it sits on the same network as your work laptop, it increases the number of weak points inside the home environment. Separation reduces that risk path.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Open your router's admin page and run through these.",
+  "items": [
+    "Default admin password has been changed to a unique strong one",
+    "Wi-Fi protocol is WPA3 (or WPA2 if WPA3 not available)",
+    "Wi-Fi passphrase is long (12+ characters) and unique",
+    "Router firmware is up to date",
+    "A separate guest network is enabled for visitors and IoT devices",
+    "Remote management / UPnP is disabled (unless actively needed)"
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the best next step when the router setting is blocked.",
+  "questions": [
+    {
+      "prompt": "Your ISP-managed router hides the admin settings, so you cannot confirm WPA3 or firmware status.",
+      "options": [
+        {"text": "Ignore it because the ISP surely handles everything", "correct": false, "feedback": "Managed hardware still warrants confirmation of the security baseline."},
+        {"text": "Contact the ISP or admin owner to verify firmware, encryption mode, and guest-network options", "correct": true, "feedback": "Right: blocked router settings should be confirmed through the party controlling the device."},
+        {"text": "Factory-reset the router without asking", "correct": false, "feedback": "That risks downtime and still may not restore administrative access."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Five settings on a home router handle most realistic risk. If you never changed the defaults, assume there is easy value here.</p>
+</section>

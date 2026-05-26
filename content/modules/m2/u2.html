@@ -1,0 +1,89 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>A message from "IT Support" lands in your inbox with a polished logo and no spelling errors. It looks convincing until you expand the sender address and see a domain you do not recognize. The clue was in the structure, not the writing quality.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Most phishing emails contain visible signals if you know where to look, but those signals live in the message structure rather than in obvious mistakes.</p>
+  <p>That matters because modern phishing often looks professional. Clean grammar and good branding do not prove legitimacy. Structural details such as sender, reply-to, and destination links are usually more reliable than tone or spelling.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What to inspect before you click</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div><strong>Check the real sender.</strong> Display names are cosmetic; the actual address and domain matter more.</div></li>
+    <li><span class="lesson-step-number">2</span><div><strong>Check reply behavior.</strong> A strange reply-to can redirect your response to the attacker.</div></li>
+    <li><span class="lesson-step-number">3</span><div><strong>Check the destination.</strong> Hover or long-press links to see where the click would really go.</div></li>
+    <li><span class="lesson-step-number">4</span><div><strong>Check the attachment context.</strong> Unexpected files deserve more suspicion than expected ones.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Workplace example</span>
+  <h2>Why structure beats spelling</h2>
+  <p>An attacker can copy your company's logo and write perfect English in seconds. They have a harder time making a fake domain, reply-to address, and login destination all fit the real workflow. That is why structural inspection is the higher-value habit.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Email triage rule</h2>
+  <ul class="lesson-checklist">
+    <li>Do not trust a message only because it is clean and familiar-looking.</li>
+    <li>Expand senders and preview links before taking action.</li>
+    <li>Treat unexpected attachments as suspicious until the context checks out.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Inspect each detail and decide whether it's a phishing signal.",
+  "questions": [
+    {
+      "prompt": "Display name says 'IT Support', but the actual address is it-support@security-helpdesk-portal.com.",
+      "options": [
+        {"text": "Phishing signal", "correct": true, "feedback": "Right: display names lie freely. The unrelated domain is the tell."},
+        {"text": "Normal", "correct": false, "feedback": "Look again: the domain has nothing to do with your company."}
+      ]
+    },
+    {
+      "prompt": "An email from your CFO has a 'Reply-To' header pointing to a Gmail address.",
+      "options": [
+        {"text": "Phishing signal", "correct": true, "feedback": "Right: a mismatched reply-to is one of the strongest signals."},
+        {"text": "Normal", "correct": false, "feedback": "Internal mail should not redirect replies to a personal Gmail."}
+      ]
+    },
+    {
+      "prompt": "Hovering over a link labeled 'View invoice' shows the URL https://docs-share.invoice-portal.co/login.",
+      "options": [
+        {"text": "Phishing signal", "correct": true, "feedback": "Right: the visible label and the actual URL don't match a known vendor."},
+        {"text": "Normal", "correct": false, "feedback": "An unfamiliar third-party domain in a financial workflow is suspicious."}
+      ]
+    },
+    {
+      "prompt": "An expected proposal arrives as a PDF from a vendor you spoke with this morning.",
+      "options": [
+        {"text": "Normal", "correct": true, "feedback": "Right: context matches and you were expecting it. Stay alert but this is normal."},
+        {"text": "Phishing signal", "correct": false, "feedback": "Trick option: repeat. This one is normal."}
+      ]
+    },
+    {
+      "prompt": "The email is well-written, branded correctly, and has no spelling errors.",
+      "options": [
+        {"text": "Therefore safe", "correct": false, "feedback": "Modern phishing is clean. Absence of errors is not evidence of legitimacy."},
+        {"text": "Not sufficient on its own: check structure", "correct": true, "feedback": "Right: check sender, reply-to, links, and attachments regardless."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Phishing emails reveal themselves through structure more reliably than through sloppy writing. Inspect the mechanics of the message, not just the surface.</p>
+</section>

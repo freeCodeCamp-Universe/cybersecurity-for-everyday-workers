@@ -1,0 +1,68 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>The instinct to clean up a suspicious situation often destroys the very evidence responders need. Preserving the artifact usually helps more than trying to make the problem disappear.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Preserve first, then report. Deleting, resetting, or experimenting with a suspicious artifact often removes useful evidence and costs time.</p>
+  <p>This does not mean doing nothing forever. It means stopping improvisation long enough for the response team to decide what should happen next.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What preservation looks like in practice</h2>
+  <ul class="lesson-checklist">
+    <li>Keep suspicious emails intact long enough to forward them in a way that preserves headers.</li>
+    <li>Stop interacting with the artifact instead of testing it further.</li>
+    <li>Capture screenshots or notes about timing and visible behavior when safe to do so.</li>
+    <li>Follow responder instructions before taking destructive actions.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the correct preservation action.",
+  "questions": [
+    {
+      "prompt": "You received a phishing email and want to report it.",
+      "options": [
+        {"text": "Delete it after reporting", "correct": false, "feedback": "Don't delete before the team has it; forward as attachment first."},
+        {"text": "Forward as attachment to the reporting address (preserves headers)", "correct": true, "feedback": "Right: preserves the metadata investigators need."},
+        {"text": "Reply asking the sender if it's real", "correct": false, "feedback": "Confirms your address is live and tips off the attacker."}
+      ]
+    },
+    {
+      "prompt": "You clicked a suspicious link. The page looks weird.",
+      "options": [
+        {"text": "Power off the laptop immediately", "correct": false, "feedback": "Powering off can destroy evidence in memory. Report first."},
+        {"text": "Stop interacting, take a screenshot from another device, report", "correct": true, "feedback": "Right: preserve, don't tidy."},
+        {"text": "Try the link in another browser to see what it does", "correct": false, "feedback": "More interaction is the opposite of preservation."}
+      ]
+    },
+    {
+      "prompt": "You realize your laptop is missing.",
+      "options": [
+        {"text": "Wait an hour to see if it turns up", "correct": false, "feedback": "First-hour matters most for remote lock and locate."},
+        {"text": "Use Find My / IT remote-lock immediately, then report", "correct": true, "feedback": "Right: locate, lock, report."}
+      ]
+    },
+    {
+      "prompt": "You sent sensitive customer data to the wrong external recipient.",
+      "options": [
+        {"text": "Delete the sent message from your outbox so no record exists", "correct": false, "feedback": "Destroys the record IT needs to assess scope and recall."},
+        {"text": "Leave the message intact; report immediately so IT can recall and assess", "correct": true, "feedback": "Right: preservation supports the recall and the disclosure assessment."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Preserve, then report. Do not tidy up a potential incident before the people handling it have seen what happened.</p>
+</section>

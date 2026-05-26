@@ -1,0 +1,92 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Jae manages payroll, travel bookings, three vendor portals, and a benefits dashboard. They know every account should have a different password, but after the tenth login they start reusing variations because there is no realistic way to remember them all.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>A password manager removes the trade-off between security and memory by storing unique passwords for every account behind one strong master password.</p>
+  <p>Without a manager, the advice to "use a different strong password everywhere" often collapses under normal work pressure. A manager is what makes the better habit practical at scale.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>How a manager changes the problem</h2>
+  <p>A password manager stores credentials in an encrypted vault. In plain language, encryption means the stored data is scrambled so that someone without the right key cannot read it. The manager then fills passwords for you, which means you stop relying on memory and stop typing passwords into every login box manually.</p>
+  <p>This solves two problems at once: uniqueness becomes manageable, and long random passwords become usable because you no longer need to memorize each one.</p>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Choosing a type</span>
+  <h2>Common password manager categories</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Employer-provided</h3>
+      <p>Often the best first choice for work because it fits company policy and support processes.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Cloud-based</h3>
+      <p>Syncs across laptop and phone. Useful when you log in from multiple devices during the workday.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Local-only</h3>
+      <p>Keeps the vault on devices you control. This offers more manual control, but also more setup burden.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Important limit</span>
+  <h2>The master password still matters</h2>
+  <p>A manager reduces password reuse, but it concentrates importance into one master password. If you forget it and do not have a recovery method, you can lock yourself out of your vault. If it is weak, the protection of the vault is weaker too.</p>
+  <p>That is why the master password should follow Unit 2's passphrase rules, and why you should either keep a written backup in a physically secure place or use the provider's approved recovery setup.</p>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Your first migration plan</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div>Confirm whether your employer already provides or requires a password manager.</div></li>
+    <li><span class="lesson-step-number">2</span><div>Create the vault using a strong passphrase you can recover safely if needed.</div></li>
+    <li><span class="lesson-step-number">3</span><div>Add your highest-risk accounts first: work email, payroll, finance, and any admin accounts.</div></li>
+    <li><span class="lesson-step-number">4</span><div>Use generated passwords for those accounts instead of inventing your own variations.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Hands-on: tick each step as you complete it.",
+  "items": [
+    "Chosen a password manager (or confirmed the one your employer provides)",
+    "Created an account using a passphrase from Unit 2",
+    "Stored the master passphrase in a secure offline location (or set up account recovery)",
+    "Added at least two work credentials to the vault",
+    "Logged out of one account and logged back in via autofill",
+    "Installed the manager's browser extension or mobile autofill"
+  ]
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Pick the best next move for each password-manager scenario.",
+  "prompt_header": "Scenario",
+  "columns": ["Add to vault now", "Ask IT first", "Use account recovery / backup", "Generate a new unique password"],
+  "rows": [
+    {"prompt": "Your work email still uses a memorable password you know by heart.", "correct_column": "Generate a new unique password", "explanation": "Email is high priority and should get a unique generated password."},
+    {"prompt": "Your employer may already provide an approved password manager, but you have not checked.", "correct_column": "Ask IT first", "explanation": "Confirm the approved tool before choosing your own for work."},
+    {"prompt": "You created a vault but have not stored the recovery method anywhere safe.", "correct_column": "Use account recovery / backup", "explanation": "Recovery setup should be handled before depending on the vault."},
+    {"prompt": "A payroll portal still is not stored in the manager even though you use it monthly.", "correct_column": "Add to vault now", "explanation": "High-value accounts should be migrated into the vault promptly."}
+  ],
+  "feedback_correct": "Correct: each scenario maps to the next highest-value password-manager action."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>A password manager is not a bonus or an afterthought. It is the tool that makes unique strong passwords realistic for people with real jobs and too many accounts.</p>
+</section>

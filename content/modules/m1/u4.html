@@ -1,0 +1,104 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Rina's password for a supplier portal is stolen in a phishing attack. The attacker tries to log in that night. Because the account also requires a second factor that Rina controls, the stolen password is not enough on its own.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Multi-factor authentication adds a second lock. It requires proof from more than one category, so a password alone does not grant access.</p>
+  <p>This does not make every login perfect, but it changes the economics of the attack. Many common compromises depend on stolen passwords being usable immediately. MFA breaks that assumption.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What counts as a different factor</h2>
+  <div class="lesson-compare">
+    <div class="lesson-compare-item">
+      <h3>Something you know</h3>
+      <p>Password, PIN, or passphrase. Two different passwords do not count as two factors.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Something you have</h3>
+      <p>A phone, authenticator app, or hardware security key that the attacker does not physically control.</p>
+    </div>
+    <div class="lesson-compare-item">
+      <h3>Something you are</h3>
+      <p>Biometrics such as fingerprint or face unlock, usually backed by a device PIN.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lesson-section lesson-section--example">
+  <span class="lesson-kicker">Strength order</span>
+  <h2>How the common MFA options compare</h2>
+  <p><strong>SMS codes</strong> are widely available and still much better than no MFA, but they depend on the phone number system. <strong>Authenticator apps</strong> generate time-based codes on your device and avoid that weakness. <strong>Hardware security keys</strong> offer the strongest protection because they are harder to phish and are tied more tightly to the real site.</p>
+  <p>The practical rule is simple: use the strongest option the system actually supports, but do not delay enabling MFA while waiting for the perfect method.</p>
+</section>
+
+<section class="lesson-section lesson-section--warning">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Two real-world misunderstandings</h2>
+  <ul class="lesson-checklist">
+    <li>"SMS is weak, so I will wait until TOTP is offered." This leaves the account with no second factor at all.</li>
+    <li>"I can leave the hardware key plugged into the shared workstation." Once it is left with the device, it no longer behaves like a separate factor.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Where to enable MFA first</h2>
+  <ol class="lesson-steps">
+    <li><span class="lesson-step-number">1</span><div>Enable MFA on work email first, because email often controls other account resets.</div></li>
+    <li><span class="lesson-step-number">2</span><div>Next secure finance, payroll, HR, admin, and VPN accounts.</div></li>
+    <li><span class="lesson-step-number">3</span><div>Store backup codes or recovery methods somewhere safe so you are not locked out later.</div></li>
+  </ol>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "quiz",
+  "instructions": "Pick the best MFA method for each worker.",
+  "questions": [
+    {
+      "prompt": "A healthcare worker logs into a records system from a shared workstation. The system supports SMS, TOTP, and FIDO2 hardware keys.",
+      "options": [
+        {"text": "SMS code", "correct": false, "feedback": "Better than nothing, but a hardware key is far stronger and the system supports it."},
+        {"text": "Authenticator app (TOTP)", "correct": false, "feedback": "Good, but a hardware key is stronger and avoids needing a phone in clinical settings."},
+        {"text": "FIDO2 hardware security key", "correct": true, "feedback": "Right: phishing-resistant, fast on shared workstations, no phone dependency."}
+      ]
+    },
+    {
+      "prompt": "A small business owner runs everything from a personal phone. Her bank only offers SMS or an authenticator app.",
+      "options": [
+        {"text": "SMS code", "correct": false, "feedback": "SIM swapping is a real risk for someone with banking and business accounts on one number."},
+        {"text": "Authenticator app (TOTP)", "correct": true, "feedback": "Right: TOTP avoids SMS interception and works offline."},
+        {"text": "Disable MFA to keep things simple", "correct": false, "feedback": "Any MFA is better than none. Do not turn it off."}
+      ]
+    },
+    {
+      "prompt": "A remote worker's company portal only supports SMS MFA. Nothing else.",
+      "options": [
+        {"text": "Skip MFA until they support TOTP", "correct": false, "feedback": "Any MFA is better than none. Use SMS now and ask IT about adding TOTP."},
+        {"text": "Enable SMS, then ask IT to add TOTP support", "correct": true, "feedback": "Right: use what's available, push for stronger options."},
+        {"text": "Buy a YubiKey and try to register it anyway", "correct": false, "feedback": "If the system does not support it, it will not work. Use SMS and advocate for change."}
+      ]
+    },
+    {
+      "prompt": "A warehouse worker shares a tablet with three others to clock in and view the schedule.",
+      "options": [
+        {"text": "Personal phone authenticator app", "correct": true, "feedback": "Right: keeps the second factor on each worker's own device, not the shared tablet."},
+        {"text": "SMS to the tablet's number", "correct": false, "feedback": "The tablet is shared: anyone who has it gets the code."},
+        {"text": "Hardware key plugged into the tablet permanently", "correct": false, "feedback": "Same problem: a key left on the shared device is no longer a second factor."}
+      ]
+    }
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>MFA is one of the highest-impact upgrades you can make quickly. Even the weakest MFA is a major improvement over password-only login, and stronger options reduce risk further.</p>
+</section>

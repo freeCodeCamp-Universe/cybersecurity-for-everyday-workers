@@ -1,0 +1,62 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Cloud sync feels like protection because files appear on multiple devices, but sync can also copy mistakes, deletions, and ransomware damage everywhere. Recovery needs a plan, not just convenience.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Backups protect against ransomware, accidental deletion, and device loss. Version history protects against bad edits and overwrites.</p>
+  <p>Those are related but different tools. Version history helps when the file still exists and you need an older state. Independent backup helps when the live copy is missing, encrypted, or unrecoverable.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>What a safe recovery setup includes</h2>
+  <ul class="lesson-checklist">
+    <li>More than one copy of important files.</li>
+    <li>At least one recovery path that does not depend on the same live sync behavior.</li>
+    <li>Knowing where version history lives before you need it during stress.</li>
+    <li>Understanding that a writable backup can sometimes be damaged by ransomware too.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--myth">
+  <span class="lesson-kicker">Common mistake</span>
+  <h2>Sync is not the same as backup</h2>
+  <p>Sync is designed to keep copies aligned. That is useful for collaboration, but dangerous when the change itself is the problem. If a file is deleted or corrupted, sync may faithfully spread the damage instead of protecting against it.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "matrix",
+  "instructions": "Decide whether each example has an independent recovery path.",
+  "prompt_header": "Backup setup",
+  "columns": ["Independent backup exists", "Only sync / not enough"],
+  "rows": [
+    {"prompt": "A file lives in cloud sync with version history and a separate monthly export archive", "correct_column": "Independent backup exists", "explanation": "There is a recovery path outside live sync alone."},
+    {"prompt": "A file is in Dropbox sync only, with no separate backup or version rollback confirmed", "correct_column": "Only sync / not enough", "explanation": "Sync by itself is not a backup."},
+    {"prompt": "A finance workbook is stored on a laptop and copied nightly to an offline backup appliance", "correct_column": "Independent backup exists", "explanation": "The copy is outside the live working device."},
+    {"prompt": "A report was emailed to yourself once six months ago and nowhere else", "correct_column": "Only sync / not enough", "explanation": "A stale emailed copy is not a reliable backup strategy."}
+  ],
+  "feedback_correct": "Correct: independent recovery matters more than just having multiple synced copies."
+}
+  </script>
+  <script type="application/json" data-exercise>
+{
+  "type": "checklist",
+  "instructions": "Confirm version-history know-how.",
+  "items": [
+    "Found the version-history menu in your main file platform",
+    "Restored a previous version of one test file (then re-saved current)",
+    "Noted the retention window your platform offers"
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>A single copy is one accident from gone. Know where your backups are, and know how to roll back a version before you need to do it in a hurry.</p>
+</section>

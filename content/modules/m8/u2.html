@@ -1,0 +1,46 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>Many incidents do not look dramatic at first. An unexpected MFA prompt, a misdirected attachment, or a strange sent email can feel small or ambiguous, even when it is exactly the kind of early signal a security team needs.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>An incident is anything suggesting information, accounts, or systems may have been exposed, accessed, or changed without authorization. The threshold is suspicion, not certainty.</p>
+  <p>The practical skill is recognizing the shapes that should trigger reporting so you do not wait for "proof" that usually arrives too late.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>The main categories to notice</h2>
+  <ul class="lesson-checklist">
+    <li>Account-related signals such as unexpected prompts, resets, or lockouts.</li>
+    <li>Phishing-related actions such as clicks, replies, or opened attachments.</li>
+    <li>Device-related issues such as theft, loss, or unusual software behavior.</li>
+    <li>Data-related mistakes such as wrong recipients or wrong storage locations.</li>
+    <li>Suspicious behavior or requests that do not fit normal process.</li>
+  </ul>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "sort",
+  "instructions": "For each, decide your action.",
+  "categories": ["Definitely report", "Verify the request out-of-band", "Probably routine"],
+  "items": [
+    {"text": "An MFA prompt for your account at 3am that you didn't trigger", "category": "Definitely report", "explanation": "Someone has your password: report and change it."},
+    {"text": "Your laptop won't power on after dropping it", "category": "Probably routine", "explanation": "Hardware failure: IT helpdesk, not security incident, unless data is compromised."},
+    {"text": "An email from yourself in your sent folder you don't remember sending", "category": "Definitely report", "explanation": "Sign of account takeover."},
+    {"text": "A colleague asks you to share customer data in a Slack DM", "category": "Verify the request out-of-band", "explanation": "Could be legitimate, could be a compromised account or social engineering: verify."},
+    {"text": "A printer is making clicking noises", "category": "Probably routine", "explanation": "Maintenance, not security."},
+    {"text": "You realize you sent a payslip PDF to the wrong employee", "category": "Definitely report", "explanation": "Data exposure incident: report so the team can recall and assess scope."}
+  ]
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>The threshold is suspicion, not proof. If an event fits one of the common incident shapes, err toward reporting.</p>
+</section>

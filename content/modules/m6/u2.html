@@ -1,0 +1,66 @@
+<section class="lesson-section lesson-section--scenario">
+  <span class="lesson-kicker">Why this matters</span>
+  <h2>Scenario opener</h2>
+  <p>One-off permissions feel easier than setting up roles, but over time they create a maze nobody fully understands. That maze is hard to audit and even harder to clean up.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Core concept</h2>
+  <p>Granting access by role is more accurate, easier to audit, and easier to revoke than giving individuals ad hoc permissions one at a time.</p>
+  <p>Roles turn access into a repeatable pattern tied to the job itself. Individual exceptions turn access into history, and history accumulates faster than most teams realize.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Why role-based access scales better</h2>
+  <ul class="lesson-checklist">
+    <li>The role defines what the job needs, not what one person happened to collect over time.</li>
+    <li>Adding or removing a person becomes easier because the bundle is pre-defined.</li>
+    <li>Time-bound exceptions stand out more clearly when the normal path is role-based.</li>
+  </ul>
+</section>
+
+<section class="lesson-section lesson-section--action">
+  <span class="lesson-kicker">What to do</span>
+  <h2>Ask for the role, not the whole system</h2>
+  <p>A good request sounds like "add me to the reviewers group for this project until the review ends," not "give me access to everything Priya has." Specific, role-based requests are easier to approve and easier to remove later.</p>
+</section>
+
+<section class="lesson-section">
+  <h2>Exercise</h2>
+  <script type="application/json" data-exercise>
+{
+  "type": "cloze",
+  "instructions": "Complete the access request using the best fixed choices.",
+  "segments": [
+    "Please add me to the ",
+    " role for the ",
+    " review. I need ",
+    " access until ",
+    "."
+  ],
+  "tokens": [
+    {"id": "emea-reviewers", "label": "EMEA Sales Reviewers"},
+    {"id": "all-sales", "label": "entire sales drive"},
+    {"id": "q3", "label": "Q3"},
+    {"id": "forever", "label": "further notice"},
+    {"id": "comment", "label": "comment"},
+    {"id": "edit", "label": "edit"},
+    {"id": "sept30", "label": "30 Sept"},
+    {"id": "admin", "label": "admin"}
+  ],
+  "blanks": [
+    {"correct": "emea-reviewers"},
+    {"correct": "q3"},
+    {"correct": "comment"},
+    {"correct": "sept30"}
+  ],
+  "feedback_correct": "Correct: the request is role-based, scoped, and time-bound.",
+  "feedback_incorrect": "Use the role, project period, lowest reasonable access level, and a defined end date."
+}
+  </script>
+</section>
+
+<section class="lesson-section">
+  <h2>Takeaway</h2>
+  <p>Frame access by role and time. That makes it easier for everyone to grant, audit, and revoke without guesswork.</p>
+</section>
