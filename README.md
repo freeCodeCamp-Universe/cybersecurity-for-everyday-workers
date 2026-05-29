@@ -34,3 +34,12 @@ src/
 content/modules/     - lesson content (m1-m10)
 platform.yaml        - deployment config
 ```
+
+## License
+
+Since this project is going in the announcement, you should add the license:
+
+Copyright © 2014 [freeCodeCamp.org](http://freecodecamp.org/)
+The content of this repository is bound by the following licenses:
+- The computer software is licensed under the [BSD-3-Clause](https://github.com/freeCodeCamp/freeCodeCamp/blob/main/LICENSE.md) license.
+- The curriculum content is copyright © 2014 [freeCodeCamp.org](http://freecodecamp.org/)
