@@ -69,6 +69,11 @@ a:focus-visible {
   text-decoration: underline;
 }
 
+#lesson-body a,
+.notice a {
+  text-decoration: underline;
+}
+
 code,
 kbd,
 pre {

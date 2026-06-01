@@ -1,6 +1,7 @@
 const COLORS = ["#f1be32", "#acd157", "#dbb8ff", "#99c9ff", "#ffadad"];
 
 export function launchConfetti(container = document.body) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const canvas = document.createElement("canvas");
   canvas.style.cssText =
     "position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:1";

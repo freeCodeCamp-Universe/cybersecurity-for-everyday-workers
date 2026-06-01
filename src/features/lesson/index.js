@@ -33,6 +33,8 @@ const SKELETON_HTML = `<div class="lesson-skeleton">
 
 let currentLesson = null;
 let requestSerial = 0;
+let hasNavigated = false;
+let sidebarFocusTrap = null;
 
 resetLessonBtn.addEventListener("click", () => {
   if (!currentLesson) return;
@@ -125,6 +127,8 @@ async function navigateTo(target, historyMode) {
     lessonShell.classList.remove("is-loading");
     footerEl.classList.remove("is-loading");
     btn.disabled = true;
+    if (hasNavigated) titleEl.focus();
+    hasNavigated = true;
     return;
   }
 
@@ -153,6 +157,8 @@ async function navigateTo(target, historyMode) {
   lessonShell.classList.remove("is-loading");
   footerEl.classList.remove("is-loading");
   btn.disabled = false;
+  if (hasNavigated) titleEl.focus();
+  hasNavigated = true;
   prefetchAdjacent(target.moduleId, target.unitId);
 }
 
@@ -329,11 +335,11 @@ function initSidebarToggle() {
   }
 
   if (backdrop) {
-    backdrop.addEventListener("click", closeMobileSidebar);
+    backdrop.addEventListener("click", () => closeMobileSidebar({ returnFocus: true }));
   }
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMobileSidebar();
+    if (e.key === "Escape") closeMobileSidebar({ returnFocus: true });
   });
 }
 
@@ -343,14 +349,38 @@ function openMobileSidebar() {
   const menuBtn = document.getElementById("sidebar-menu-btn");
   if (backdrop) backdrop.hidden = false;
   if (menuBtn) menuBtn.setAttribute("aria-expanded", "true");
+
+  const sidebar = document.getElementById("lesson-sidebar");
+  const focusable = [...sidebar.querySelectorAll("a, button")].filter(
+    (el) => el.offsetParent !== null
+  );
+  if (focusable.length) focusable[0].focus();
+
+  sidebarFocusTrap = (e) => {
+    if (e.key !== "Tab") return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  };
+  document.addEventListener("keydown", sidebarFocusTrap);
 }
 
-function closeMobileSidebar() {
+function closeMobileSidebar({ returnFocus = false } = {}) {
   lessonLayout.classList.remove("sidebar-open");
   const backdrop = document.getElementById("sidebar-backdrop");
   const menuBtn = document.getElementById("sidebar-menu-btn");
   if (backdrop) backdrop.hidden = true;
   if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+
+  if (sidebarFocusTrap) {
+    document.removeEventListener("keydown", sidebarFocusTrap);
+    sidebarFocusTrap = null;
+  }
+  if (returnFocus && menuBtn) menuBtn.focus();
 }
 
 function applyHistory(target, historyMode) {

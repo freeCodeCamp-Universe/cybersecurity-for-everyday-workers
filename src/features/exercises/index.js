@@ -72,8 +72,8 @@ function renderQuiz(host, cfg, id) {
   const saved = getState(id);
   const answers = saved.answers || {};
   cfg.questions.forEach((q, qi) => {
-    const block = el("div", { class: "quiz-question" });
-    block.appendChild(el("p", { class: "quiz-prompt", text: `${qi + 1}. ${q.prompt}` }));
+    const block = el("fieldset", { class: "quiz-question" });
+    block.appendChild(el("legend", { class: "quiz-prompt", text: `${qi + 1}. ${q.prompt}` }));
     const optsList = el("div", { class: "quiz-options" });
     q.options.forEach((opt, oi) => {
       const optId = `${id}-q${qi}-o${oi}`;
@@ -109,8 +109,8 @@ function renderMultiquiz(host, cfg, id) {
   const saved = getState(id);
   const answers = saved.answers || {};
   cfg.questions.forEach((q, qi) => {
-    const block = el("div", { class: "quiz-question" });
-    block.appendChild(el("p", { class: "quiz-prompt", text: `${qi + 1}. ${q.prompt}` }));
+    const block = el("fieldset", { class: "quiz-question" });
+    block.appendChild(el("legend", { class: "quiz-prompt", text: `${qi + 1}. ${q.prompt}` }));
     const optsList = el("div", { class: "quiz-options" });
     const selected = new Set(Array.isArray(answers[qi]) ? answers[qi] : []);
     q.options.forEach((opt, oi) => {
@@ -159,7 +159,7 @@ function renderSort(host, cfg, id) {
     select.appendChild(el("option", { text: "Choose…", attrs: { value: "" } }));
     cfg.categories.forEach((cat) => select.appendChild(el("option", { text: cat, attrs: { value: cat } })));
     if (placements[i]) select.value = placements[i];
-    const fb = el("span", { class: "sort-feedback" });
+    const fb = el("span", { class: "sort-feedback", attrs: { "aria-live": "polite", "aria-atomic": "true" } });
     row.appendChild(select);
     row.appendChild(fb);
     host.appendChild(row);
@@ -190,7 +190,7 @@ function renderMatch(host, cfg, id) {
     select.appendChild(el("option", { text: "Choose…", attrs: { value: "" } }));
     rightOptions.forEach((r) => select.appendChild(el("option", { text: r, attrs: { value: r } })));
     if (pairs[leftItem]) select.value = pairs[leftItem];
-    const fb = el("span", { class: "match-feedback" });
+    const fb = el("span", { class: "match-feedback", attrs: { "aria-live": "polite", "aria-atomic": "true" } });
     const selectWrap = el("div", { class: "match-select-wrap" });
     selectWrap.appendChild(select);
     row.appendChild(selectWrap);
@@ -288,9 +288,9 @@ function renderMatrix(host, cfg, id) {
   table.appendChild(el("caption", { class: "sr-only", text: captionText }));
   const thead = el("thead");
   const headRow = el("tr");
-  headRow.appendChild(el("th", { text: cfg.prompt_header || "Scenario" }));
+  headRow.appendChild(el("th", { text: cfg.prompt_header || "Scenario", attrs: { scope: "col" } }));
   cfg.columns.forEach((column) => {
-    headRow.appendChild(el("th", { text: column }));
+    headRow.appendChild(el("th", { text: column, attrs: { scope: "col" } }));
   });
   thead.appendChild(headRow);
   table.appendChild(thead);
@@ -421,7 +421,7 @@ function renderFreetext(host, cfg, id) {
     const ta = el("textarea", { attrs: { id: fieldId, rows: String(f.rows || 3), placeholder: f.placeholder || "" } });
     if (values[i]) ta.value = values[i];
     let timer;
-    const status = el("span", { class: "freetext-status" });
+    const status = el("span", { class: "freetext-status", attrs: { "aria-live": "polite" } });
     ta.addEventListener("input", () => {
       values[i] = ta.value;
       status.textContent = "Saving…";

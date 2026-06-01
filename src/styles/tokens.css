@@ -22,7 +22,7 @@
   --border: var(--gray-75);
   --fg-primary: var(--gray-00);
   --fg-secondary: var(--gray-10);
-  --fg-muted: var(--gray-45);
+  --fg-muted: #b8b8c8;
   --link: var(--blue);
   --success: var(--green);
   --danger: var(--red);
