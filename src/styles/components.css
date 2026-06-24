@@ -584,6 +584,19 @@
   border-width: 3px;
 }
 
+.btn--danger {
+  background-color: var(--danger-background);
+  background-image: none;
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+  border-width: 3px;
+}
+
+.btn--danger:hover,
+.btn--danger:focus-visible {
+  filter: brightness(1.12);
+}
+
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
   background-color: rgba(172, 209, 87, 0.08);

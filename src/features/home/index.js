@@ -101,12 +101,25 @@ function render() {
   list.innerHTML = MODULES.map(moduleCard).join("");
 }
 
+const resetDialog = document.getElementById("reset-dialog");
+
 document.getElementById("reset-progress").addEventListener("click", () => {
-  if (confirm("Clear all progress? This cannot be undone.")) {
-    clearAll();
-    clearExerciseStore();
-    render();
-  }
+  resetDialog.showModal();
+});
+
+document.getElementById("reset-dialog-cancel").addEventListener("click", () => {
+  resetDialog.close();
+});
+
+document.getElementById("reset-dialog-confirm").addEventListener("click", () => {
+  clearAll();
+  clearExerciseStore();
+  render();
+  resetDialog.close();
+});
+
+resetDialog.addEventListener("click", (e) => {
+  if (e.target === resetDialog) resetDialog.close();
 });
 
 render();

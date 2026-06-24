@@ -36,6 +36,17 @@
 <ol class="module-list" id="module-list" aria-label="Course modules"></ol>
     </main>
 
+    <dialog id="reset-dialog" class="congrats-dialog" aria-labelledby="reset-dialog-title">
+      <div class="congrats-content">
+        <h2 class="congrats-title" id="reset-dialog-title">Reset Progress</h2>
+        <p class="congrats-body">Clear all progress? This cannot be undone.</p>
+        <div class="congrats-actions">
+          <button type="button" id="reset-dialog-cancel" class="btn btn--ghost">Cancel</button>
+          <button type="button" id="reset-dialog-confirm" class="btn btn--danger">Reset</button>
+        </div>
+      </div>
+    </dialog>
+
     <script>
       (function () {
         var btn = document.getElementById('theme-toggle');
