@@ -1,49 +1,168 @@
+/* freeCodeCamp raw color scale - never reference directly in components */
 :root {
-  --gray-90: #0a0a23;
-  --gray-85: #1b1b32;
-  --gray-80: #2a2a40;
-  --gray-75: #3b3b4f;
-  --gray-45: #858591;
-  --gray-15: #d0d0d5;
-  --gray-10: #dfdfe2;
-  --gray-05: #f5f6f7;
+  --theme-color: #0a0a23;
+
   --gray-00: #ffffff;
+  --gray-05: #f5f6f7;
+  --gray-10: #dfdfe2;
+  --gray-15: #d0d0d5;
+  --gray-45: #858591;
+  --gray-75: #3b3b4f;
+  --gray-80: #2a2a40;
+  --gray-85: #1b1b32;
+  --gray-90: #0a0a23;
+  --gray-00-translucent: rgba(255, 255, 255, 0.85);
+  --gray-90-translucent: rgba(10, 10, 35, 0.85);
 
-  --purple: #dbb8ff;
-  --yellow: #f1be32;
-  --blue: #99c9ff;
-  --green: #acd157;
-  --red: #ffadad;
-  --focus: #198eee;
+  --purple-light: #dbb8ff;
+  --purple-dark: #5a01a7;
+  --yellow-light: #ffc300;
+  --yellow-dark: #4d3800;
+  --blue-light: rgb(153, 201, 255);
+  --blue-light-translucent: rgba(153, 201, 255, 0.3);
+  --blue-dark: rgb(0, 46, 173);
+  --blue-dark-translucent: rgba(0, 46, 173, 0.3);
+  --blue-mid: #198eee;
+  --green-light: #acd157;
+  --green-dark: #00471b;
+  --red-light: #ffadad;
+  --red-dark: #850000;
 
-  --bg-primary: var(--gray-90);
-  --bg-secondary: var(--gray-85);
-  --bg-surface: var(--gray-80);
-  --border: var(--gray-75);
-  --fg-primary: var(--gray-00);
-  --fg-secondary: var(--gray-10);
-  --fg-muted: #b8b8c8;
-  --link: var(--blue);
-  --success: var(--green);
-  --danger: var(--red);
-  --cta: var(--yellow);
+  --focus-outline-color: var(--blue-mid);
 
-  --font-mono: "Hack-ZeroSlash", "Fira Mono", Menlo, Consolas, monospace;
-  --font-sans: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography */
+  --font-family-sans-serif: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-monospace: 'Hack-ZeroSlash', 'Fira Mono', Menlo, Consolas, monospace;
+  --font-mono: var(--font-family-monospace);
+  --font-sans: var(--font-family-sans-serif);
 
-  --radius: 4px;
+  --font-size-root: 18px;
+  --text-h1: 1.5rem;
+  --text-h2: 1.25rem;
+  --text-h3: 1.1rem;
+  --text-body: 1rem;
+  --text-sm: 0.889rem;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --line-height-body: 1.5;
+  --line-height-heading: 1.1;
+  --line-height-tight: 1.2;
+
+  /* Spacing ramp */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-s: 15px;
+  --space-m: 25px;
+  --space-l: 40px;
+  --space-xl: 65px;
+
+  /* Spacing aliases (rem-based, matches layout expectations) */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-5: 3rem;
 
+  /* Borders - 3px chunky is the signature freeCodeCamp control border */
+  --border-width: 3px;
+  --border-width-thin: 1px;
+
+  /* Radius - square corners are the freeCodeCamp standard */
+  --radius: 0;
+  --radius-sm: 2px;
+  --radius-pill: 999px;
+
+  /* Shadows - for light mode and overlays only */
+  --shadow-overlay: 0 8px 24px rgba(10, 10, 35, 0.35);
+
+  /* Layout */
   --max-readable: 720px;
   --max-page: 960px;
-
   --header-height: 38px;
   --sidebar-width: 260px;
   --sidebar-width-collapsed: 40px;
+}
+
+/* Dark palette (default) */
+.dark-palette {
+  color-scheme: dark;
+
+  --primary-background: var(--gray-90);
+  --secondary-background: var(--gray-85);
+  --tertiary-background: var(--gray-80);
+  --quaternary-background: var(--gray-75);
+  --primary-color: var(--gray-00);
+  --secondary-color: var(--gray-05);
+  --tertiary-color: var(--gray-10);
+  --highlight-color: var(--blue-light);
+  --selection-color: var(--blue-light-translucent);
+  --success-color: var(--green-light);
+  --success-background: var(--green-dark);
+  --danger-color: var(--red-light);
+  --danger-background: var(--red-dark);
+  --yellow-color: var(--yellow-light);
+  --purple-color: var(--purple-light);
+
+  /* Aliases used throughout component CSS */
+  --bg-primary: var(--primary-background);
+  --bg-secondary: var(--secondary-background);
+  --bg-surface: var(--tertiary-background);
+  --border: var(--quaternary-background);
+  --fg-primary: var(--primary-color);
+  --fg-secondary: var(--tertiary-color);
+  --fg-muted: var(--gray-45);
+  --link: var(--highlight-color);
+  --focus: var(--focus-outline-color);
+  --success: var(--success-color);
+  --danger: var(--danger-color);
+  --cta: var(--yellow-color);
+  --yellow: var(--yellow-color);
+  --blue: var(--highlight-color);
+  --green: var(--success-color);
+  --red: var(--danger-color);
+  --purple: var(--purple-color);
+}
+
+/* Light palette */
+.light-palette {
+  color-scheme: light;
+
+  --primary-background: var(--gray-00);
+  --secondary-background: var(--gray-05);
+  --tertiary-background: var(--gray-10);
+  --quaternary-background: var(--gray-15);
+  --primary-color: var(--gray-90);
+  --secondary-color: var(--gray-85);
+  --tertiary-color: var(--gray-80);
+  --highlight-color: var(--blue-dark);
+  --selection-color: var(--blue-dark-translucent);
+  --success-color: var(--green-dark);
+  --success-background: var(--green-light);
+  --danger-color: var(--red-dark);
+  --danger-background: var(--red-light);
+  --yellow-color: var(--yellow-dark);
+  --purple-color: var(--purple-dark);
+
+  /* Aliases used throughout component CSS */
+  --bg-primary: var(--primary-background);
+  --bg-secondary: var(--secondary-background);
+  --bg-surface: var(--tertiary-background);
+  --border: var(--quaternary-background);
+  --fg-primary: var(--primary-color);
+  --fg-secondary: var(--tertiary-color);
+  --fg-muted: var(--gray-45);
+  --link: var(--highlight-color);
+  --focus: var(--focus-outline-color);
+  --success: var(--success-color);
+  --danger: var(--danger-color);
+  --cta: var(--yellow-color);
+  --yellow: var(--yellow-color);
+  --blue: var(--highlight-color);
+  --green: var(--success-color);
+  --red: var(--danger-color);
+  --purple: var(--purple-color);
 }
 
 @media (prefers-reduced-motion: reduce) {

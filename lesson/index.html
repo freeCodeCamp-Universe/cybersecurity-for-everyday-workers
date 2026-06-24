@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="../src/assets/favicon-32x32.png" />
     <title>Lesson · Cybersecurity for Everyday Workers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" />
     <link rel="stylesheet" href="../src/styles/tokens.css" />
     <link rel="stylesheet" href="../src/styles/base.css" />
     <link rel="stylesheet" href="../src/styles/components.css" />
@@ -15,7 +18,10 @@
       <a href="../" class="brand">
         <span class="prompt">$</span>cybersecurity-for-workers
       </a>
-      <a href="../" class="header-link">all modules</a>
+      <nav class="header-nav">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">light</button>
+        <a href="../" class="header-link">all modules</a>
+      </nav>
     </header>
 
     <div class="lesson-layout">
@@ -83,6 +89,22 @@
       </div>
     </dialog>
 
+    <script>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var saved = localStorage.getItem('fcc-theme') || 'dark';
+        function apply(t) {
+          document.body.className = t === 'light' ? 'light-palette' : 'dark-palette';
+          btn.textContent = t === 'light' ? 'dark' : 'light';
+          btn.setAttribute('aria-label', 'Switch to ' + (t === 'light' ? 'dark' : 'light') + ' theme');
+          localStorage.setItem('fcc-theme', t);
+        }
+        apply(saved);
+        btn.addEventListener('click', function () {
+          apply(document.body.classList.contains('light-palette') ? 'dark' : 'light');
+        });
+      })();
+    </script>
     <script type="module" src="../src/features/lesson/index.js"></script>
   </body>
 </html>

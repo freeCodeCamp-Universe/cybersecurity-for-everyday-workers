@@ -1,12 +1,16 @@
 /* Congratulations dialog */
 .congrats-dialog {
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   background: var(--bg-surface);
   color: var(--fg-primary);
   padding: 0;
   width: min(460px, 90vw);
   z-index: 9999;
+}
+
+.light-palette .congrats-dialog {
+  box-shadow: var(--shadow-overlay);
 }
 
 .congrats-dialog::backdrop {
@@ -50,7 +54,7 @@
   margin-bottom: var(--space-3);
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: var(--space-2) var(--space-3);
 }
 
@@ -94,7 +98,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-left: 3px solid var(--success);
-  border-radius: var(--radius);
+  border-radius: 0;
   font-family: var(--font-mono);
   font-size: 0.875rem;
 }
@@ -135,7 +139,7 @@
 .module-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -167,7 +171,7 @@
   min-width: 2.75rem;
   text-align: center;
   padding: 0.2rem 0.5rem;
-  border-radius: var(--radius);
+  border-radius: 0;
   background: var(--bg-primary);
   color: var(--fg-muted);
   border: 1px solid var(--border);
@@ -295,7 +299,7 @@
   border-left: 3px solid var(--purple);
   padding: var(--space-2) var(--space-3);
   margin-bottom: var(--space-3);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0;
 }
 
 .lesson-objective .label {
@@ -351,7 +355,7 @@
 .lesson-section--myth {
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: var(--space-2) var(--space-3);
 }
 
@@ -446,7 +450,7 @@
 .lesson-compare-item {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 0.9rem 1rem;
 }
 
@@ -555,12 +559,13 @@
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 700;
-  padding: 0.6rem 1.1rem;
-  border-radius: var(--radius);
-  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  border: 3px solid #feac32;
   cursor: pointer;
-  background: var(--cta);
-  color: var(--gray-90);
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  color: #0a0a23;
   text-decoration: none;
   transition: filter 0.1s ease;
 }
@@ -572,15 +577,23 @@
 }
 
 .btn--ghost {
-  background: transparent;
+  background-color: transparent;
+  background-image: none;
   color: var(--success);
   border-color: var(--success);
+  border-width: 3px;
 }
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
-  background: rgba(172, 209, 87, 0.08);
+  background-color: rgba(172, 209, 87, 0.08);
+  background-image: none;
   filter: none;
+}
+
+.light-palette .btn--ghost:hover,
+.light-palette .btn--ghost:focus-visible {
+  background-color: rgba(0, 71, 27, 0.08);
 }
 
 .btn .check {
@@ -633,7 +646,7 @@
   font-family: var(--font-mono);
   font-size: 1rem;
   padding: 0.15rem 0.4rem;
-  border-radius: var(--radius);
+  border-radius: 0;
   line-height: 1;
   flex-shrink: 0;
   min-height: 44px;
@@ -658,7 +671,7 @@
   font-family: var(--font-mono);
   font-size: 1rem;
   padding: 0.15rem 0.5rem;
-  border-radius: var(--radius);
+  border-radius: 0;
   line-height: 1;
   align-items: center;
   flex-shrink: 0;
@@ -816,7 +829,7 @@
   padding: var(--space-3);
   background: var(--bg-surface);
   border: 1px dashed var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   color: var(--fg-muted);
 }
 
@@ -824,7 +837,7 @@
 .exercise-widget {
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: var(--space-2) var(--space-3);
   margin-top: var(--space-2);
 }
@@ -869,7 +882,7 @@
   padding: 0.5rem 0.7rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   cursor: pointer;
 }
 .quiz-option:hover {
@@ -930,7 +943,7 @@
   background: var(--bg-primary);
   color: var(--fg-primary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 0.4rem 0.6rem;
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -971,7 +984,7 @@
   padding: 0.6rem 0.8rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   counter-increment: order;
 }
 .order-item::before {
@@ -988,7 +1001,7 @@
   background: var(--bg-primary);
   color: var(--fg-primary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   min-width: 44px;
   min-height: 44px;
   cursor: pointer;
@@ -1015,7 +1028,7 @@
   padding: 0.5rem 0.7rem;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   cursor: pointer;
 }
 .checklist-item input {
@@ -1043,7 +1056,7 @@
   background: var(--bg-primary);
   color: var(--fg-primary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 0.6rem 0.8rem;
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -1135,7 +1148,7 @@
   background: var(--bg-primary);
   color: var(--fg-primary);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 0.4rem 0.6rem;
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -1145,7 +1158,7 @@
 .lesson-main pre {
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: var(--space-2);
   overflow-x: auto;
   font-family: var(--font-mono);
@@ -1175,7 +1188,7 @@
 
 .lesson-skeleton-line {
   height: 1rem;
-  border-radius: var(--radius);
+  border-radius: 0;
   background: linear-gradient(
     90deg,
     var(--bg-surface) 0%,

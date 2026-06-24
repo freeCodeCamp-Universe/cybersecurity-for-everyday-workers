@@ -9,6 +9,8 @@
 html {
   font-size: 18px;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 @media (max-width: 500px) {
@@ -22,7 +24,7 @@ body {
   background: var(--bg-primary);
   color: var(--fg-primary);
   font-family: var(--font-sans);
-  line-height: 1.5;
+  line-height: var(--line-height-body);
   min-height: 100vh;
 }
 
@@ -30,20 +32,16 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
   margin: 0 0 var(--space-2);
+  color: var(--fg-primary);
 }
 
-h1 {
-  font-size: 1.75rem;
-}
-h2 {
-  font-size: 1.35rem;
-}
-h3 {
-  font-size: 1.1rem;
-}
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-body); font-weight: var(--font-weight-regular); }
 
 p {
   margin: 0 0 var(--space-2);
@@ -83,13 +81,17 @@ pre {
 code {
   background: var(--bg-surface);
   padding: 0.1em 0.35em;
-  border-radius: var(--radius);
+  border-radius: 0;
   font-size: 0.95em;
 }
 
 :focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus);
+  outline-offset: 0;
+}
+
+::selection {
+  background: var(--selection-color);
 }
 
 .sr-only {
@@ -110,22 +112,19 @@ code {
   left: var(--space-2);
   z-index: 9999;
   padding: 0.5rem 1rem;
-  background: var(--cta);
+  background: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
   color: var(--gray-90);
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.9rem;
-  border-radius: var(--radius);
+  border: 3px solid #feac32;
+  border-radius: 0;
   text-decoration: none;
 }
 
 .skip-link:focus {
   top: var(--space-2);
-}
-
-::selection {
-  background: var(--yellow);
-  color: var(--gray-90);
 }
 
 .site-header {
@@ -155,6 +154,12 @@ code {
   text-shadow: 0 0 8px var(--green);
 }
 
+.site-header .header-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
 .site-header .header-link {
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -163,12 +168,31 @@ code {
   border: 0;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
+  text-decoration: none;
 }
 
 .site-header .header-link:hover,
 .site-header .header-link:focus-visible {
   color: var(--link);
   text-decoration: underline;
+}
+
+.theme-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--fg-primary);
+  border-color: var(--fg-muted);
 }
 
 .page {
